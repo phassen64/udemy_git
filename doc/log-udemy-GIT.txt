@@ -577,4 +577,6 @@ https://blog.datamics.com/github-anleitung-zum-umstellen-von-push-mit-passwort-a
     git add --all
     git commit -am "<commit message>"
     git push    
-    
+
++   git local documentation    
+    file:///H:/MY/tools/Git/mingw64/share/doc/git-doc/index.html

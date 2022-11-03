@@ -407,7 +407,8 @@ $>  git add .                       *   sämtliche neue Dateien => stash
 $>  git checkout <BRANCH>
 $>  git checkout HEAD <file>        *   lokales File zurücksetzen - not committed
 $>  git commit -m "<str>" <file>    *   update modified singleFile in Repository
-$>  git commit -a -m "<Comment>"    *   update multiple files of Repository
+$>  git commit -a -m "<Comment>"        *   update multiple files of Repository
+$>  git commit --all -m "<Comment>"     *   dito
 $>  git commit –-amend              * show toBe committed files in vi
 $>  git log                         *   alle Commits sehen - ohne Datei-Zuordnung
 $>  git log --abbrev-commit         *   commits mit short-commitID sehen
