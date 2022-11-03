@@ -580,3 +580,16 @@ https://blog.datamics.com/github-anleitung-zum-umstellen-von-push-mit-passwort-a
 
 +   git local documentation    
     file:///H:/MY/tools/Git/mingw64/share/doc/git-doc/index.html
+
++   git stash usage 
+    $>  git status          #   clean ?
+    $>  echo "Spiderman" >> test1.txt 
+    $>  git status          #   shows modified
+    $>  git stash           #   restore to HEAD but save modifications 
+    $>  git status          #   no modifications 
+    $>  git stash apply     #   restore modifications 
+    $>  git status          #   show modfied file test1.txt again
+    $>  git commit --all -m "by stash"  # perform commit now
+    
+
+    
