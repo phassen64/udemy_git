@@ -599,5 +599,27 @@ https://blog.datamics.com/github-anleitung-zum-umstellen-von-push-mit-passwort-a
     $>  git status          #   show modfied file test1.txt again
     $>  git commit --all -m "by stash"  # perform commit now
     
++   main => master umbenennung
+    $>  git branch -m main master   #   rename "master" into "main"
+    $>  git push -u origin master       #   push "master" to remote-server
+    $>  git push origin --delete main   #   delete main at remote-server   
 
++   branch erstellen 
+    $>  git branch          # view active branches and branch "master"
+    $>  git branch <newBranch>      #   create new branch 
+    $>  git checkout <anyBranch>        #   switch to branch <anyBranch>
+    $>  git checkout -b <newBranch>     #   create+switch to new branch <newBranch>
+        
++   HotFix auf den Master - Fast Forward
+    $>  git branch master    
+    $>  git checkout -b "bHot"          #   create+switch to HotFix
+    $>  echo "SambaEnLaCase" > samba.txt 
+    $>  git add .
+    $>  git commit -a -m "dancing"      #   commit to hotfix
+    $>  git checkout master             #   switch to master
+    $>  git merge "bHot"                #   merge hotfix with master
+    $>  git branch -d "bHot"            #   remove my HotFix
+    
+    
+    
     

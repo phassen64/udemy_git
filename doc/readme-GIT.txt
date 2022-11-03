@@ -408,9 +408,15 @@ $>  rm --force --recursive tutor_git    *   rmDir
     $>  git add --all                   *   add incl.subDir into STASH
     $>  git add .                       *   sämtliche neue Dateien => stash
 
+•   c:  branch          
+    $>  git branch                  *   view active branches and branch "master"
+    $>  git branch <newBranch>      *   create new branch, but no switch 
+
 •   c:  checkout
-    $>  git checkout <BRANCH>
+    $>  git checkout <anyBranch>        *   switch into <anyBranch>
     $>  git checkout HEAD <file>        *   lokales File zurücksetzen - not committed
+    $>  git checkout master             *   switch branch to HEAD
+    $>  git checkout -b <newBranch>     *   switch+create into <newBranch>
 
 •   c:  commit
     $>  git commit -m "<str>" <file>    *   update modified singleFile in Repository
@@ -418,6 +424,9 @@ $>  rm --force --recursive tutor_git    *   rmDir
     $>  git commit --all -m "<Comment>"     *   dito
     $>  git commit –-amend              * show toBe committed files in vi
 
+•   c:  fetch
+    $>  git fetch           * download server changes into memory - don't change local
+    
 •   c:  log
     $>  git log                         *   alle Commits sehen - ohne Datei-Zuordnung
     $>  git log --abbrev-commit         *   commits mit short-commitID sehen
@@ -428,6 +437,9 @@ $>  rm --force --recursive tutor_git    *   rmDir
 
 •   c:  mv
     $>  git mv [-v] <source> <destination>  * rename a file
+
+•   c:  pull
+    $>  git pull            * download server changes into local => fetch
 
 •   c:  reset       => revert        
     $>  git reset <ID>
