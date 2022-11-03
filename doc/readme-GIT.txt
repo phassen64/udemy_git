@@ -420,6 +420,7 @@ $>  git revert <ID>
 $>  git reset <ID>
 $>  git reset --hard HEAD           *   lokales File zurücksetzen - not committed
 $>  git reset –hard <ID>            *   reset committed File 
+$>  git restore <file>              *   restore uncommitted File 
 $>  git show <ID>                   *   more infos
 $>  git stash                       *   reset modified from STASH to HEAD
 $>  git status                      *   wichtigstes Kommando ?uptodate?
