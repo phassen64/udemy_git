@@ -416,11 +416,12 @@ $>  git log --raw                   *   alle Commits sehen - MIT Datei-Zuordnung
 $>  git log -n<i>                   *   nur die letzten i Commits
 $>  git log -- <file>               *   log einer bestimmten Datei
 $>  git log -p <file>               *   log einer bestimmten Datei + diff command
+$>  git mv [-v] <source> <destination>  * rename a file
 $>  git revert <ID>    
 $>  git reset <ID>
 $>  git reset --hard HEAD           *   lokales File zurücksetzen - not committed
 $>  git reset –hard <ID>            *   reset committed File 
-$>  git restore <file>              *   restore uncommitted File 
+$>  git restore <file>              *   restore uncommitted File == git checkout HEAD 
 $>  git show <ID>                   *   more infos
 $>  git stash                       *   reset modified from STASH to HEAD
 $>  git status                      *   wichtigstes Kommando ?uptodate?
