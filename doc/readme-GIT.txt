@@ -394,11 +394,15 @@
 $>  cat <file>                      *   show file content
 $>  clear                           *   clear screen
 $>  ls -al                          *   list
+$>  rm ls -al                           *   list
+$>  rm --force --recursive tutor_git    *   rmDir
+
 
 Legende:   ID:=commitID
 
 $>  git add <file>                  *   add singel file into STASH einchecken
 $>  git add <file1> <file2>...      *   copy local files into STASH
+$>  git add --all                   *   add incl.subDir into STASH
 $>  git add .                       *   sämtliche neue Dateien => stash
 $>  git checkout <BRANCH>
 $>  git checkout HEAD <file>        *   lokales File zurücksetzen - not committed

@@ -572,5 +572,9 @@ https://blog.datamics.com/github-anleitung-zum-umstellen-von-push-mit-passwort-a
 <<< !date:<2022-11-03>:Do 
     
 +   Wiederholungen
-    
+
++   multiple git add 
+    git add --all
+    git commit -am "<commit message>"
+    git push    
     
