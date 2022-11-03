@@ -441,7 +441,7 @@ $>  rm --force --recursive tutor_git    *   rmDir
     $>  git revert <ID>    
 
 •   c:  show  
-    $>  git show <ID>                   *   more infos
+    $>  git show <ID>               *   ID={commitID|tagID}
 
 •   c:  stash
     $>  git stash                       *   reset modified from STASH to HEAD
@@ -449,6 +449,6 @@ $>  rm --force --recursive tutor_git    *   rmDir
 •   c:  status 
     $>  git status                      *   wichtigstes Kommando ?uptodate?
 
-•   c:  tag
+•   c:  tag <tagID>
     $>  git tag v1.0-lw                 *   lightweight
     $>  git tag -a v1.0 -m “release version 4.0”    * annotated

@@ -30,7 +30,15 @@
     •   Historie ansehen mit log
     •   mehr Informationen mit show
     •   lokales Wiederherstellen mit checkout|reset
-    
+7.  Branching
+    •   Branch erstellen
+    •   Merge 
+    •   Rebase 
+    •   Stash
+8.  Weitere Git Konfigurationen
+9.  Git Tipps
+10. Hurra
+        
 
     
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
