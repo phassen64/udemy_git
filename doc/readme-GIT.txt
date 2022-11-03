@@ -398,31 +398,57 @@ $>  rm ls -al                           *   list
 $>  rm --force --recursive tutor_git    *   rmDir
 
 
-Legende:   ID:=commitID
 
-$>  git add <file>                  *   add singel file into STASH einchecken
-$>  git add <file1> <file2>...      *   copy local files into STASH
-$>  git add --all                   *   add incl.subDir into STASH
-$>  git add .                       *   sämtliche neue Dateien => stash
-$>  git checkout <BRANCH>
-$>  git checkout HEAD <file>        *   lokales File zurücksetzen - not committed
-$>  git commit -m "<str>" <file>    *   update modified singleFile in Repository
-$>  git commit -a -m "<Comment>"        *   update multiple files of Repository
-$>  git commit --all -m "<Comment>"     *   dito
-$>  git commit –-amend              * show toBe committed files in vi
-$>  git log                         *   alle Commits sehen - ohne Datei-Zuordnung
-$>  git log --abbrev-commit         *   commits mit short-commitID sehen
-$>  git log --raw                   *   alle Commits sehen - MIT Datei-Zuordnung
-$>  git log -n<i>                   *   nur die letzten i Commits
-$>  git log -- <file>               *   log einer bestimmten Datei
-$>  git log -p <file>               *   log einer bestimmten Datei + diff command
-$>  git mv [-v] <source> <destination>  * rename a file
-$>  git revert <ID>    
-$>  git reset <ID>
-$>  git reset --hard HEAD           *   lokales File zurücksetzen - not committed
-$>  git reset –hard <ID>            *   reset committed File 
-$>  git restore <file>              *   restore uncommitted File == git checkout HEAD 
-$>  git show <ID>                   *   more infos
-$>  git stash                       *   reset modified from STASH to HEAD
-$>  git status                      *   wichtigstes Kommando ?uptodate?
+=== git <cmd>=:c
+    Legende:   ID:=commitID
 
+•   c:  add
+    $>  git add <file>                  *   add single file into STASH einchecken
+    $>  git add <file1> <file2>...      *   copy local files into STASH
+    $>  git add --all                   *   add incl.subDir into STASH
+    $>  git add .                       *   sämtliche neue Dateien => stash
+
+•   c:  checkout
+    $>  git checkout <BRANCH>
+    $>  git checkout HEAD <file>        *   lokales File zurücksetzen - not committed
+
+•   c:  commit
+    $>  git commit -m "<str>" <file>    *   update modified singleFile in Repository
+    $>  git commit -a -m "<Comment>"        *   update multiple files of Repository
+    $>  git commit --all -m "<Comment>"     *   dito
+    $>  git commit –-amend              * show toBe committed files in vi
+
+•   c:  log
+    $>  git log                         *   alle Commits sehen - ohne Datei-Zuordnung
+    $>  git log --abbrev-commit         *   commits mit short-commitID sehen
+    $>  git log --raw                   *   alle Commits sehen - MIT Datei-Zuordnung
+    $>  git log -n<i>                   *   nur die letzten i Commits
+    $>  git log -- <file>               *   log einer bestimmten Datei
+    $>  git log -p <file>               *   log einer bestimmten Datei + diff command
+
+•   c:  mv
+    $>  git mv [-v] <source> <destination>  * rename a file
+
+•   c:  reset       => revert        
+    $>  git reset <ID>
+    $>  git reset --hard HEAD       *   lokales File zurücksetzen - not committed
+    $>  git reset –hard <ID>        *   reset committed File 
+
+•   c:  restore
+    $>  git restore <file>          *   restore uncommitted File == git checkout HEAD 
+    
+•   c:  revert
+    $>  git revert <ID>    
+
+•   c:  show  
+    $>  git show <ID>                   *   more infos
+
+•   c:  stash
+    $>  git stash                       *   reset modified from STASH to HEAD
+
+•   c:  status 
+    $>  git status                      *   wichtigstes Kommando ?uptodate?
+
+•   c:  tag
+    $>  git tag v1.0-lw                 *   lightweight
+    $>  git tag -a v1.0 -m “release version 4.0”    * annotated
