@@ -2,8 +2,4 @@ peter2
 willy
 leo
 maja
-<<<<<<< Updated upstream
 mars
-=======
-pluto
->>>>>>> Stashed changes
