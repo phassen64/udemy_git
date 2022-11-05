@@ -612,6 +612,7 @@ https://blog.datamics.com/github-anleitung-zum-umstellen-von-push-mit-passwort-a
         
 +   HotFix auf den Master - Fast Forward
     $>  git branch master    
+    $>  git branch "bTmp"               #   add branch HOT
     $>  git checkout -b "bHot"          #   create+switch to HotFix
     $>  echo "SambaEnLaCase" > samba.txt 
     $>  git add .
