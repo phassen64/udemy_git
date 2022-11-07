@@ -701,7 +701,11 @@ https://blog.datamics.com/github-anleitung-zum-umstellen-von-push-mit-passwort-a
     c:  init 
     $>  git init  <newGitRepository>    * neues projekt
     
-    
++   Ein neues Clone
+    $>rm --force --recursive tutor_git
+    $>git clone https://github.com/phassen64/tutor_git tutor_git 
+
+        
     
     
     

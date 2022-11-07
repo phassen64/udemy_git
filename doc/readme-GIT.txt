@@ -426,6 +426,9 @@ $>  rm --force --recursive tutor_git    *   rmDir
     $>  git checkout master             *   switch branch to HEAD
     $>  git checkout -b <newBranch>     *   switch+create into <newBranch>
 
+•   c:  clone
+    $>git clone https://github.com/phassen64/tutor_git.git tutor_git 
+
 •   c:  commit
     $>  git commit                      *   commit merge conflict
     $>  git commit -m "<str>" <file>    *   update modified singleFile in Repository
