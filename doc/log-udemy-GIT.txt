@@ -250,7 +250,7 @@
     $>  git init
 
 +   Ein existierendes Repository klonen
-    $>git clone ssh://nutzer@domain.com/repository.git
+    $>git clone ssh://nutzer@domain.com/repository.git <mein Name>
 
 
 =*= s:  Lokale Änderungen
@@ -611,6 +611,7 @@ https://blog.datamics.com/github-anleitung-zum-umstellen-von-push-mit-passwort-a
     $>  git checkout -b <newBranch>     #   create+switch to new branch <newBranch>
         
 +   HotFix auf den Master - Fast Forward
+    $>  git branch master    
     $>  git branch "bTmp"               #   add branch HOT
     $>  git checkout -b "bHot"          #   create+switch to HotFix
     $>  echo "SambaEnLaCase" > samba.txt 
@@ -619,7 +620,27 @@ https://blog.datamics.com/github-anleitung-zum-umstellen-von-push-mit-passwort-a
     $>  git checkout master             #   switch to master
     $>  git merge "bHot"                #   merge hotfix with master
     $>  git branch -d "bHot"            #   remove my HotFix
+    $>  git branch -D "bHot"            #   remove my HotFix der NICHT gemerged wurde
+
++   remove multiple
+    $>  git rm tron*.txt
+
++   FeatureBranch den Änderungen des MASTER aktualisieren
+    $>  git status 
+    $>  git checkout -b "bTmp"      *   bFeature and checkout 
+    $>  echo "Batman" >> file2.txt  
+    $>  git commit -m "batman" -a   *   commit at bFeature
+    $>  git checkout master 
+    $>  echo "Superman" >> file1.txt  
+    $>  git commit -m "super" -a    *   commit at bMaster
+    $>  git checkout bTmp           *   HEAD:=bTmp 
+    $>  git merge master            *   copy all changes from master into bTmp
     
-    
-    
+   
++   Ein Remote Repository clonen und einen Branch ziehen 
+    $>  cd git
+    $>  git clone https://github.com/datamics/flair udemy_flair
+    $>  git branch -a   # remote branches sehen
+    $>  git checkout hotfix
+    $<  *   branch 'hotfix' set up to track 'origin/hotfix
     

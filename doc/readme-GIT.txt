@@ -409,8 +409,11 @@ $>  rm --force --recursive tutor_git    *   rmDir
     $>  git add .                       *   sämtliche neue Dateien => stash
 
 •   c:  branch          
-    $>  git branch                  *   view active branches and branch "master"
-    $>  git branch <newBranch>      *   create new branch, but no switch 
+    $>  git branch                      *   view active branches and branch "master"
+    $>  git branch -a                   *   show branches 
+    $>  git branch <newBranch>          *   create new branch, but no switch 
+    $>  git branch -d <mergedBranch>    *   remove merged branch
+    $>  git branch -D <testedBranch>    *   remove branch without a merge
 
 •   c:  checkout
     $>  git checkout <anyBranch>        *   switch into <anyBranch>
@@ -424,6 +427,9 @@ $>  rm --force --recursive tutor_git    *   rmDir
     $>  git commit --all -m "<Comment>"     *   dito
     $>  git commit –-amend              * show toBe committed files in vi
 
+•   c:  diff
+    $>  git diff master <branch>        *    difference branch to master
+
 •   c:  fetch
     $>  git fetch           * download server changes into memory - don't change local
     
@@ -435,6 +441,10 @@ $>  rm --force --recursive tutor_git    *   rmDir
     $>  git log -- <file>               *   log einer bestimmten Datei
     $>  git log -p <file>               *   log einer bestimmten Datei + diff command
 
+•   c:  merge
+    $>  git merge <bBranch>             *    HEAD==master imports bBranch
+    $>  git merge master                *    HEAD==bTmp; branch bTmp imports master
+    
 •   c:  mv
     $>  git mv [-v] <source> <destination>  * rename a file
 
@@ -447,10 +457,10 @@ $>  rm --force --recursive tutor_git    *   rmDir
     $>  git reset –hard <ID>        *   reset committed File 
 
 •   c:  restore
-    $>  git restore <file>          *   restore uncommitted File == git checkout HEAD 
-    
+    $>  git restore <file>          *   restore uncommitted File == history cleared 
+                    
 •   c:  revert
-    $>  git revert <ID>    
+    $>  git revert <ID>             *   reset committed File - history untouched
 
 •   c:  show  
     $>  git show <ID>               *   ID={commitID|tagID}
