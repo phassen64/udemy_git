@@ -643,4 +643,67 @@ https://blog.datamics.com/github-anleitung-zum-umstellen-von-push-mit-passwort-a
     $>  git checkout hotfix
     $<  *   branch 'hotfix' set up to track 'origin/hotfix
     
-+   Merge    
+<<< !date:<2022-11-07>:Mo 
+
++   Merge 
+    "Git merge is a command that allows you to merge branches from Git."
+    3-Wege-Merge  => 2 merges zusammenführen
+    
++   Rebase
+    "Git rebase is a command that allows developers to integrate 
+        changes from one branch to another."
+    +   der Verlauf wird neu erstellt
+    +   der Master verwendet die Historie des Branches
+    +   ist besser bei vielen branches
+    +   alter Zweige werden gelöscht 
+    +   Konflikt werden nur 1 Konflikt angezeigt
+    +   nur, wenn ein einzelner mit einem Feature-Branch arbeitet 
+    +   daher, niemals in öffentlichen Branches verwenden
+    === Beispiel: 
+    +   $>git checkout -b bTmp 
+    +   $>echo "Putzi"      >> fileVogel.txt 
+    +   $>git commit -m "enter" -a 
+    +   $>git checkout bMaster 
+    +   $>echo "starWars"    >> fileMovie.txt 
+    +   $>git commit -m "enter" -a 
+    +   $>git status
+    +   $>git checkout bTmp     * zurück zum Feature-Branch 
+    +   $>git rebase bMaster    * Änderungen vom Master übenehmen und Commit
+    +   $>git checkout bMaster  * zum Master 
+    +   $>git merge bTmp        * fast-forward commit
+    +   $>git status
+    +   $>git log
+    
++   Stash
+    "verwaltet Änderungen unabhängig von Commits "
+    === Beispiel: 
+    +   $>git stash  clear      *   clear stash
+    #   $>git status            *   clean
+    +   $>git stash list        *   empty
+    +   $>git stash show        *   empty
+    +   $>echo "Mike" >> file1.txt 
+    +   $>git status            *   modifikation
+    +   $>git stash push        *   save 
+    +   $>git stash show        *   shows modification changes
+    +   $>git stash list        *   show stash STACK
+    +   $>echo "Mike" >> file2.txt 
+    +   $>git stash             *   save - like stash push  
+    +   $>git stash show        *   shows modification changes
+    +   $>git status            *   both changes saved into stash
+    +   $>cat file1.txt 
+    +   $>cat file2.txt         *   no changes 
+    +   $>git stash apply       *   restore file2 changes
+    +   $>git commit -m "mike" -a   *   commit 
+    +   $>git log  
+    +   $>git reset --hard HEAD
+            
++   Ein neues Repository anlegen 
+    c:  init 
+    $>  git init  <newGitRepository>    * neues projekt
+    
+    
+    
+    
+    
+    
+ 

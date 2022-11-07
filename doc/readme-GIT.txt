@@ -177,9 +177,6 @@
     Commit zurückgesetzt und die Arbeit bis zu
     diesem Commit verworfen.
 
-+   stage 
-    Bühne, Abschnitt, Stufe, Stadium
-
 +   SHA-1
     Mit SHA (Secure Hash Algorithmus) werden Prüfsummen
         für digitale Informationen erstellt. 
@@ -187,6 +184,9 @@
     In Git wird SHA verwendet, 
         um Commits zu benennen.
     Somit kann die Validität eines Commits anhand seines Namens überprüft werden.
+
++   stage 
+    Bühne, Abschnitt, Stufe, Stadium
 
 +   Tag (Markierung)
     Tags sind vom Entwickler angelegte Markierungen, 
@@ -247,7 +247,7 @@
     $>  git add . -p <DATEI>
 
 +   Commite alle lokalen Änderungen mit der gegebenen Beschreibung
-    $>  git commit -am”Beschreibung”
+    $>  git commit -m ”Beschreibung”
 
 +   Alle lokalen Änderungen dem letzten Commit hinzufügen
     (Nur für nicht bereits publizierte Commits!)
@@ -408,12 +408,17 @@ $>  rm --force --recursive tutor_git    *   rmDir
     $>  git add --all                   *   add incl.subDir into STASH
     $>  git add .                       *   sämtliche neue Dateien => stash
 
+•   c:  rebase      #   special merge 
+    $>  git rebase --about              *   undo rebase
+    $>  git rebase bMaster              *   auf einem Feature-Branch den Master importieren
+
 •   c:  branch          
     $>  git branch                      *   view active branches and branch "master"
     $>  git branch -a                   *   show local and remote branches 
     $>  git branch <newBranch>          *   create new branch, but no switch 
     $>  git branch -d <mergedBranch>    *   remove merged branch
     $>  git branch -D <testedBranch>    *   remove branch without a merge
+    $>  git branch -m main master       *   rename branch "main" into "master"   
 
 •   c:  checkout
     $>  git checkout <anyBranch>        *   switch into <anyBranch>
@@ -422,6 +427,7 @@ $>  rm --force --recursive tutor_git    *   rmDir
     $>  git checkout -b <newBranch>     *   switch+create into <newBranch>
 
 •   c:  commit
+    $>  git commit                      *   commit merge conflict
     $>  git commit -m "<str>" <file>    *   update modified singleFile in Repository
     $>  git commit -a -m "<Comment>"        *   update multiple files of Repository
     $>  git commit --all -m "<Comment>"     *   dito
@@ -432,6 +438,9 @@ $>  rm --force --recursive tutor_git    *   rmDir
 
 •   c:  fetch
     $>  git fetch           * download server changes into memory - don't change local
+
+•   c:  init 
+    $>  git init  <newGitRepository>    * neues projekt
     
 •   c:  log
     $>  git log                         *   alle Commits sehen - ohne Datei-Zuordnung
@@ -444,12 +453,20 @@ $>  rm --force --recursive tutor_git    *   rmDir
 •   c:  merge
     $>  git merge <bBranch>             *    HEAD==master imports bBranch
     $>  git merge master                *    HEAD==bTmp; branch bTmp imports master
+    $>  git merge --abort               *    cancel a merge
+    $>  git mergetool                   *    merge tool
     
 •   c:  mv
     $>  git mv [-v] <source> <destination>  * rename a file
 
 •   c:  pull
     $>  git pull            * download server changes into local => fetch
+
+•   c:  push        
+    $>  git push                            * lokale Version auf den remote-Server kopieren
+    $>  git push origin master                          * remote branch aktualisieren
+    $>  git push origin HEAD                            * remote branch mit akuellem HEAD
+    $>  git push origin --delete <bRemoteBranch>        * remote branch löschen
 
 •   c:  reset       => revert        
     $>  git reset <ID>
@@ -465,8 +482,15 @@ $>  rm --force --recursive tutor_git    *   rmDir
 •   c:  show  
     $>  git show <ID>               *   ID={commitID|tagID}
 
-•   c:  stash
-    $>  git stash                       *   reset modified from STASH to HEAD
+•   c:  stash                       *   stapel-Speicher über den Commit hinweg
+    $>  git stash                   *   *stash++ := mem; == push
+    $>  git stash clear             *   memset(stash,0,sizeof(stash))
+    $>  git stash apply             *   mem:=*stash
+    $>  git stash drop              *   --stash
+    $>  git stash list              *   zeigt STASH-list an - git log
+    $>  git stash show              *   print *stash
+    $>  git stash push              *   *stash++ := mem
+    $>  git stash pop               *   mem := *stash--   == git apply&&drop
 
 •   c:  status 
     $>  git status                      *   wichtigstes Kommando ?uptodate?
