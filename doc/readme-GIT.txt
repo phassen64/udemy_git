@@ -410,7 +410,7 @@ $>  rm --force --recursive tutor_git    *   rmDir
 
 •   c:  branch          
     $>  git branch                      *   view active branches and branch "master"
-    $>  git branch -a                   *   show branches 
+    $>  git branch -a                   *   show local and remote branches 
     $>  git branch <newBranch>          *   create new branch, but no switch 
     $>  git branch -d <mergedBranch>    *   remove merged branch
     $>  git branch -D <testedBranch>    *   remove branch without a merge

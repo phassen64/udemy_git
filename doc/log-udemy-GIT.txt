@@ -635,8 +635,7 @@ https://blog.datamics.com/github-anleitung-zum-umstellen-von-push-mit-passwort-a
     $>  git commit -m "super" -a    *   commit at bMaster
     $>  git checkout bTmp           *   HEAD:=bTmp 
     $>  git merge master            *   copy all changes from master into bTmp
-    
-   
+       
 +   Ein Remote Repository clonen und einen Branch ziehen 
     $>  cd git
     $>  git clone https://github.com/datamics/flair udemy_flair
@@ -644,3 +643,4 @@ https://blog.datamics.com/github-anleitung-zum-umstellen-von-push-mit-passwort-a
     $>  git checkout hotfix
     $<  *   branch 'hotfix' set up to track 'origin/hotfix
     
++   Merge    
