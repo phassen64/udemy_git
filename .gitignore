@@ -1,1 +1,7 @@
+#
+#   *** tutor ignore file
+#
+
+*.exe
+*.log
 *.png
