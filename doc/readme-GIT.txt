@@ -9,23 +9,23 @@
     3.  $>git-commit file1.txt      ==>     ins Repository git push 
     4.  $>git-push file1.txt        ==>     zum Remote-Server zB git-HUB     
     
-=   Ã„nderungen an bestehenden Dateien
+=   Änderungen an bestehenden Dateien
     1.  $>echo "samba" >> file1.txt ==>     nur im Arbeitsverzeichnis
-    2.  $>git-commit file1.txt      ==>     Ã„nderungen im Repository
-    3.  $>git-push file1.txt        ==>     Ã„nderungen in git-HUB     
+    2.  $>git-commit file1.txt      ==>     Änderungen im Repository
+    3.  $>git-push file1.txt        ==>     Änderungen in git-HUB     
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 === m:  Glossar
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
 +   Blame (hier: Verantwortung)
-    Mit dem Befehl Blame wird fÃ¼r jede Zeile einer
+    Mit dem Befehl Blame wird für jede Zeile einer
     Datei angezeigt, 
-    wer wann die letzte VerÃ¤nderung daran vorgenommen hat.
+    wer wann die letzte Veränderung daran vorgenommen hat.
 
 +   Checkout (etwa: Wechsel)
     Der Befehl zum Wechsel auf einen anderen Branch. 
-    HEAD und Index werden dabei auf den gewÃ¤hlten Branch gesetzt.
+    HEAD und Index werden dabei auf den gewählten Branch gesetzt.
 
 +   Cherry-pick (etwa: Rosinen rauspicken)
     Mit einem Cherry-pick wird ein spezifischer Commit
@@ -33,160 +33,160 @@
     angewendet. 
     Dies kann unter anderem zum Einbringen eines Commits 
     in den Ziel-Branch genutzt werden, 
-    nachdem der Commit auf einen falschen Branch ausgefÃ¼hrt wurde.
+    nachdem der Commit auf einen falschen Branch ausgeführt wurde.
 
 +   Clean (sauber)
     Ein Working Directory ist Clean, 
     wenn keinerlei Abweichungen zum letzten Commit vorliegen,
-    das heisst keine Dateien verÃ¤ndert wurden.
+    das heisst keine Dateien verändert wurden.
 
 +   Collaborator (Mitarbeiter)
-    Alle Entwickler eines Repositories, die Ã¼ber Lesund
-    Schreibrechte verfÃ¼gen.
+    Alle Entwickler eines Repositories, die über Lesund
+    Schreibrechte verfügen.
 
 +   Contributor (Beitragender)
     Ein Entwickler, dessen Pull Request in das Repository
     integriert wurde, der aber kein Collaborator ist.
 
-+   Commit (Ãœbergabe)
++   Commit (Übergabe)
     Ein Commit speichert den aktuellen Stand des Working Directories, 
-    also die jÃ¼ngst vorgenommenen Modifikationen, 
+    also die jüngst vorgenommenen Modifikationen, 
     zusammen mit einer beschreibenden Nachricht und 
     weiteren Metadaten wie Datum, Uhrzeit und Autor als
-    den nÃ¤chsten Arbeitsschritt in der Historie.
+    den nächsten Arbeitsschritt in der Historie.
 
 +   CVS Versionskontrollsystem (Concurrent Version System, CVS)
     Versionskontrollsysteme dienen der Verwaltung
     verschiedener Versionen einer Software. 
     Bekannte CVS neben Git sind Subversion und CVS. 
     Ein CVS speichert die gesamte Entwicklungshistorie
-    einer Software und ermÃ¶glicht
+    einer Software und ermöglicht
     die Zusammenarbeitet mehrerer Entwickler in
     kollaborativen Projekten.
 
 +   Diff (Differenz)
     Die Anzeige der Unterschiede zwischen zwei Dateien. 
-    Wird benutzt, um Bugs zwischen verschiedenen Commits aufzuspÃ¼ren.
+    Wird benutzt, um Bugs zwischen verschiedenen Commits aufzuspüren.
 
 +   Forking (Gabelung) 
     Forking bezeichnet das Klonen eines Online-Repositories 
-    (z.B. auf GitHub) fÃ¼r das eigene Benutzerkonto. 
-    Damit kÃ¶nnen Entwickler unabhÃ¤ngig an einem Projekt arbeiten, 
-    ohne Teil der ursprÃ¼nglichen Entwicklergruppe zu sein,
-    beispielsweise um die Software fÃ¼r ein anderes
+    (z.B. auf GitHub) für das eigene Benutzerkonto. 
+    Damit können Entwickler unabhängig an einem Projekt arbeiten, 
+    ohne Teil der ursprünglichen Entwicklergruppe zu sein,
+    beispielsweise um die Software für ein anderes
     Betriebssystem zu portieren.
 
 +   HEAD (Kopf)
     Ein Zeiger auf den aktuellen Commit des derzeitigen
     Branches. 
-    Ãœblicherweise der jÃ¼ngste Commit des Branches, 
+    Üblicherweise der jüngste Commit des Branches, 
     kann aber mit Git-Befehlen versetzt werden, 
-        um auf Ã¤ltere Commits zuzugreifen.
+        um auf ältere Commits zuzugreifen.
 
 +   Index
     Index bezeichnet die Vorbereitung des Working
     Directory vor einem Commit. 
-    Dabei wird ausgewÃ¤hlt, welche geÃ¤nderten oder neu erstellten
-    Dateien dem Commit hinzugefÃ¼gt werden.
+    Dabei wird ausgewählt, welche geänderten oder neu erstellten
+    Dateien dem Commit hinzugefügt werden.
 
 +   Issue (Angelegenheit)
     Finden Nutzer eines Repositories einen Bug oder
-    wÃ¼nschen eine Erweiterung der Software, 
-    kÃ¶nnen sie auf GitHub eine Issue eingeben, 
+    wünschen eine Erweiterung der Software, 
+    können sie auf GitHub eine Issue eingeben, 
     die dann von den Entwicklern entweder bearbeitet oder
-    zurÃ¼ckgewiesen wird.
+    zurückgewiesen wird.
 
 +   Log
     Log dient der Darstellung der Commit-Historie
     des aktuellen Branches.
 
 +   Master (hier: Original)
-    Master bezeichnet den ursprÃ¼nglich von Git angelegten,
+    Master bezeichnet den ursprünglich von Git angelegten,
         ersten Branch eines Repositories. 
     Dieser kann bei Bedarf umbenannt werden und 
         unterscheidet sich nicht von anderen Branches.
 
 +   Markdown
     Markdown ist eine einfache Formatierungssprache
-    fÃ¼r Textdateien, 
-    mit der hÃ¤ufig README-Dateien
+    für Textdateien, 
+    mit der häufig README-Dateien
     formatiert werden.
 
 +   Merge (Vereinigung)
-    Im Ã¼blichen Arbeitszyklus wird zuerst ein Pull ausgefÃ¼hrt,
+    Im üblichen Arbeitszyklus wird zuerst ein Pull ausgeführt,
     damit der lokale Klon des Repositories
     auf dem neusten Stand ist. 
     Anschliessend werden lokale Modifikationen vorgenommen, 
     die dann anschliessend mit einem Commit und Push in
     das Online-Repository integriert werden. 
-    Dabei wird ein Merge durchgefÃ¼hrt - 
+    Dabei wird ein Merge durchgeführt - 
         die neuen Programmteile werden integriert. 
     Wenn allerdings zwei Entwickler an den gleichen Programmteilen
     gleichzeitig lokal gearbeitet haben, 
     kann dabei ein Merge-Konflikt auftreten, 
-    da das Online- Repository nicht weiÃŸ, 
-    welche Teile Ã¼bernommen werden sollen. 
-    Ãœblicherweise mÃ¼ssen derartige Merge-Konflikte manuell aufgelÃ¶st werden.
+    da das Online- Repository nicht weiß, 
+    welche Teile übernommen werden sollen. 
+    Üblicherweise müssen derartige Merge-Konflikte manuell aufgelöst werden.
 
 +   Pull (Ziehen)
-    Durch Pull werden alle Ã„nderungen, 
+    Durch Pull werden alle Änderungen, 
     die im Master-Repository von anderen Entwicklern vorgenommen
     wurden, 
     aber nicht im lokalen Klon enthalten sind, 
     auf das lokale Repository angewendet.
 
 +   Pull Requests
-    Mit einem Pull Request kÃ¶nnen (auch unabhÃ¤ngige)
+    Mit einem Pull Request können (auch unabhängige)
     Entwickler die Betreiber eines Projektes
     davon in Kenntnis setzen, 
-    dass eine spezifische Ã„nderung implementiert wurde. 
+    dass eine spezifische Änderung implementiert wurde. 
     Diese muss dann zuerst getestet werden und 
     wird dann bei Erfolg in das Projekt integriert.
     Workflow:: commit<User>-push<User>-pullRequest<User>-pull<TeamLeader>
 
-+   Push (StoÃŸen)
++   Push (Stoßen)
     Mit einem Push werden alle zuletzt vorgenommenen
-    Commits dem Repository des Projektes hinzugefÃ¼gt, 
+    Commits dem Repository des Projektes hinzugefügt, 
     entweder auf einem Server wie beispielsweise GitHub 
     oder in einem lokalen Repository auf der Festplatte.
 
 +   Rebase
-    Bei einem Rebase werden die Ã„nderungen eines
+    Bei einem Rebase werden die Änderungen eines
     Branches auf einen anderen Branch angewendet, 
     beispielsweise von einem experimentiellem
     Branch auf Master. 
-    AnschlieÃŸend kann der experimentielle Branch in Master gemerged werden,
+    Anschließend kann der experimentielle Branch in Master gemerged werden,
     wodurch im Gegensatz zu einem direkten Merge
     eine lineare Entwicklungshistorie ensteht.
 
 +   Repository (Ablage)
     Ein Repository beinhaltet ein Projekt mitsamt seiner Entwicklungshistorie. 
     Das heisst, alle Zwischenschritte (in Form von Commits) der
-    Software kÃ¶nnen wiederhergestellt oder betrachtet werden. 
-    Im Fall von Git wird unterschieden zwischen einem meiÃŸt 
-        online verfÃ¼gbaren Master- Repository und 
+    Software können wiederhergestellt oder betrachtet werden. 
+    Im Fall von Git wird unterschieden zwischen einem meißt 
+        online verfügbaren Master- Repository und 
         lokalen Klonen bei allen beteiligten
     Entwicklern, 
-    die so unabhÃ¤ngig voneinander an dem Projekt arbeiten kÃ¶nnen.
+    die so unabhängig voneinander an dem Projekt arbeiten können.
 
-+   Resolve (AuflÃ¶sen)
-    Resolve bezeichnet das manuelle AuflÃ¶sen von Merge-Konflikten.
++   Resolve (Auflösen)
+    Resolve bezeichnet das manuelle Auflösen von Merge-Konflikten.
 
-+   Rewind (ZurÃ¼ckspulen)
-    Mit einem Rewind wird der HEAD auf einen frÃ¼heren
-    Commit zurÃ¼ckgesetzt und die Arbeit bis zu
++   Rewind (Zurückspulen)
+    Mit einem Rewind wird der HEAD auf einen früheren
+    Commit zurückgesetzt und die Arbeit bis zu
     diesem Commit verworfen.
 
 +   SHA-1
-    Mit SHA (Secure Hash Algorithmus) werden PrÃ¼fsummen
-        fÃ¼r digitale Informationen erstellt. 
-    Die PrÃ¼fsumme hat immer 40 Hexadezimale Zeichen.
+    Mit SHA (Secure Hash Algorithmus) werden Prüfsummen
+        für digitale Informationen erstellt. 
+    Die Prüfsumme hat immer 40 Hexadezimale Zeichen.
     In Git wird SHA verwendet, 
         um Commits zu benennen.
-    Somit kann die ValiditÃ¤t eines Commits anhand seines Namens Ã¼berprÃ¼ft werden.
+    Somit kann die Validität eines Commits anhand seines Namens überprüft werden.
 
 +   stage 
-    BÃ¼hne, Abschnitt, Stufe, Stadium
+    Bühne, Abschnitt, Stufe, Stadium
 
 +   Tag (Markierung)
     Tags sind vom Entwickler angelegte Markierungen, 
@@ -197,20 +197,20 @@
     wie beispielsweise v1.01 oder Django statt Flask
 
 +   Upstream (Flussauf)
-    Synonym fÃ¼r das Master-Repository (meiÃŸt online auf GitHub). 
+    Synonym für das Master-Repository (meißt online auf GitHub). 
     Der lokale Klon eines Repositories wird auch Downstream genannt.
 
 +   Workflow
-    Um effektiv kollaborativ arbeiten zu kÃ¶nnen, 
+    Um effektiv kollaborativ arbeiten zu können, 
     ist es wichtig, 
-    sich mit allen beteiligten Entwicklern auf einen Workflow zu verstÃ¤ndigen, 
-    beispielsweise welche Branches langfristig unverÃ¤ndert belassen werden.
+    sich mit allen beteiligten Entwicklern auf einen Workflow zu verständigen, 
+    beispielsweise welche Branches langfristig unverändert belassen werden.
 
 +   Working Tree (Arbeitsverzeichnis)
     Der Working Tree beinhaltet alle Dateien des Projektes
         im derzeitigen Zustand und 
-    kann bei Bedarf vom CVS auf einen frÃ¼heren Zustand
-    zurÃ¼ckgesetzt werden.
+    kann bei Bedarf vom CVS auf einen früheren Zustand
+    zurückgesetzt werden.
 
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -226,38 +226,38 @@
     $>git clone ssh://nutzer@domain.com/repository.git
 
 
-=*= s:  Lokale Ã„nderungen
+=*= s:  Lokale Änderungen
 
-+   GeÃ¤nderte Dateien anzeigen
++   Geänderte Dateien anzeigen
     $>  git status
 
-+   Ã„nderungen anzeigen
++   Änderungen anzeigen
     $>  git diff
 
-+   Alle Ã„nderungen dem nÃ¤chsten Commit hinzufÃ¼gen
++   Alle Änderungen dem nächsten Commit hinzufügen
     $>  git add .
 
 +   Datei umbenennen
     $>  git mv [-v] [-f] [-n] [-k] <source> <destination>
 
-+   Eine bestimmte Datei dem nÃ¤chsten Commit hinzufÃ¼gen
++   Eine bestimmte Datei dem nächsten Commit hinzufügen
     $>  git add <DATEI>
 
-+   Nur eine bestimmte Datei dem nÃ¤chsten Commit hinzufÃ¼gen
++   Nur eine bestimmte Datei dem nächsten Commit hinzufügen
     $>  git add . -p <DATEI>
 
-+   Commite alle lokalen Ã„nderungen mit der gegebenen Beschreibung
-    $>  git commit -m â€Beschreibungâ€
++   Commite alle lokalen Änderungen mit der gegebenen Beschreibung
+    $>  git commit -m ”Beschreibung”
 
-+   Alle lokalen Ã„nderungen dem letzten Commit hinzufÃ¼gen
-    (Nur fÃ¼r nicht bereits publizierte Commits!)
-    $>  git commit â€“amend
++   Alle lokalen Änderungen dem letzten Commit hinzufügen
+    (Nur für nicht bereits publizierte Commits!)
+    $>  git commit –amend
 
-+   Alle lokalen Ã„nderungen dem letzten
-        Commit mit gleicher Beschreibung   hinzufÃ¼gen
-    $>  git commit â€“amend â€“no-edit
++   Alle lokalen Änderungen dem letzten
+        Commit mit gleicher Beschreibung   hinzufügen
+    $>  git commit –amend –no-edit
 
-+   Lokale Ã„nderungen verwerfen
++   Lokale Änderungen verwerfen
     $>  git stash
 
 
@@ -269,15 +269,15 @@
 +   Die letzten 5 Commits anzeigen
     $>  git log -n5
 
-+   Alle Ã„nderungen einer bestimmten Datei anzeigen
++   Alle Änderungen einer bestimmten Datei anzeigen
         $>  git log -p <DATEI>  # mit Comment
     oder :
         $>  git log -- <DATEI>
     
-+   Wer hat was und wann an der Datei geÃ¤ndert?
++   Wer hat was und wann an der Datei geändert?
     $>git blame <DATEI>
 
-+   Commit-ID abgekÃ¼rzt anzeigen lassen anzeigen
++   Commit-ID abgekürzt anzeigen lassen anzeigen
     $>  git log --abbrev-commit
 
 +   Commit Differenz mit Commit-ID ansehen
@@ -295,7 +295,7 @@
 +   Neuen Branch aus dem aktuellen HEAD erzeugen
     $>  git branch <BRANCH>
 
-+   Lokalen Branch lÃ¶schen
++   Lokalen Branch löschen
     $>  git branch -d BRANCH
 
 +   Neuen Tag erzeugen
@@ -304,7 +304,7 @@
 +   Tags anzeigen
     $>  git tag
 
-+   Tag lÃ¶schen
++   Tag löschen
     $>  git tag -d TAG
 
 +   Zu einem Tag wechseln
@@ -328,14 +328,14 @@
 +   Remote Repository herunterladen und in HEAD integrieren
     $>  git pull REMOTE BRANCH
 
-+   Lokale Ã„nderungen auf Remote publizieren
++   Lokale Änderungen auf Remote publizieren
     $>  git push REMOTE BRANCH
 
-+   Branch im Remote Repository lÃ¶Ìˆschen
++   Branch im Remote Repository lö¨schen
     $>  git branch -dr REMOTE/BRANCH
 
 +   Tags publizieren
-    $>  git push â€“tags
+    $>  git push –tags
 
 
 =*= s:  Merge und Rebase
@@ -345,46 +345,46 @@
     $>  git merge BRANCH
 
 +   Commits des aktuellen HEAD auf ein Branch anwenden (Rebase)
-    (Nur fÃ¼r nicht publizierte Commits!)
+    (Nur für nicht publizierte Commits!)
     $>  git rebase BRANCH
 
 +   Rebase abbrechen
-    $>  git rebase â€“abort
+    $>  git rebase –abort
 
-+   Rebase nach dem AuflÃ¶sen von Konflikten fortsetzen
-    $>  git rebase â€“continue
++   Rebase nach dem Auflösen von Konflikten fortsetzen
+    $>  git rebase –continue
 
-+   Mergetool zum AuflÃ¶sen von Konflikten starten
++   Mergetool zum Auflösen von Konflikten starten
     $>  git mergetool
 
-+   Dateien mit Konflikten als gelÃ¶st markieren
++   Dateien mit Konflikten als gelöst markieren
     $>  git add DATEI
 
-=*= s:  Ã„nderungen rÃ¼ckgÃ¤ngig machen
+=*= s:  Änderungen rückgängig machen
 
 
-+   Alle lokalen Ã„nderungen im Arbeitsverzeichnis verwerfen
-    (Kann nicht rÃ¼ckgÃ¤ngig gemacht werden)
-    $>  git reset â€“hard HEAD
++   Alle lokalen Änderungen im Arbeitsverzeichnis verwerfen
+    (Kann nicht rückgängig gemacht werden)
+    $>  git reset –hard HEAD
 
-+   Lokale Ã„nderungen einer spezifischen Datei verwerfen
++   Lokale Änderungen einer spezifischen Datei verwerfen
     $>  git checkout HEAD DATEI
 
-+   Commit rÃ¼ckgÃ¤ngig machen mit einem neuen Commit, 
-    der alle Ã„nderungen verwirft
++   Commit rückgängig machen mit einem neuen Commit, 
+    der alle Änderungen verwirft
     $>  git revert COMMIT
 
-+   ZurÃ¼cksetzen auf den Head und alle Ã„nderungen verwerfen
-    $>  git reset â€“hard HEAD
++   Zurücksetzen auf den Head und alle Änderungen verwerfen
+    $>  git reset –hard HEAD
 
-+   ZurÃ¼cksetzen auf einen Commit und alle Ã„nderungen verwerfen
-    $>  git reset â€“hard COMMIT
++   Zurücksetzen auf einen Commit und alle Änderungen verwerfen
+    $>  git reset –hard COMMIT
 
-+   ZurÃ¼cksetzen auf ein Commit, ohne die Ã„enderungen anzuwenden
++   Zurücksetzen auf ein Commit, ohne die Äenderungen anzuwenden
     $>  git reset COMMIT
 
-+   ZurÃ¼cksetzen auf ein Commit ohne LÃ¶schen lokaler Ã„nderungen
-    $>  git reset â€“keep COMMIT
++   Zurücksetzen auf ein Commit ohne Löschen lokaler Änderungen
+    $>  git reset –keep COMMIT
 
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -402,17 +402,16 @@ $>  rm --force --recursive tutor_git    *   rmDir
 === git <cmd>=:c
     Legende:   ID:=commitID
 
-â€¢   c:  add
+•   c:  add
     $>  git add <file>                  *   add single file into STASH einchecken
     $>  git add <file1> <file2>...      *   copy local files into STASH
     $>  git add --all                   *   add incl.subDir into STASH
-    $>  git add .                       *   sÃ¤mtliche neue Dateien => stash
+    $>  git add .                       *   sämtliche neue Dateien => stash
 
-â€¢   c:  rebase      #   special merge 
-    $>  git rebase --about              *   undo rebase
-    $>  git rebase bMaster              *   auf einem Feature-Branch den Master importieren
+•   c:  blame               #  Wer ist verantwortlich ?
+    $>  git blame <file1>               *   Vom wem Änderungen an Datei
 
-â€¢   c:  branch          
+•   c:  branch          
     $>  git branch                      *   view active branches and branch "master"
     $>  git branch -a                   *   show local and remote branches 
     $>  git branch <newBranch>          *   create new branch, but no switch 
@@ -420,72 +419,77 @@ $>  rm --force --recursive tutor_git    *   rmDir
     $>  git branch -D <testedBranch>    *   remove branch without a merge
     $>  git branch -m main master       *   rename branch "main" into "master"   
 
-â€¢   c:  checkout
+•   c:  checkout
     $>  git checkout <anyBranch>        *   switch into <anyBranch>
-    $>  git checkout HEAD <file>        *   lokales File zurÃ¼cksetzen - not committed
+    $>  git checkout HEAD <file>        *   lokales File zurücksetzen - not committed
     $>  git checkout master             *   switch branch to HEAD
     $>  git checkout -b <newBranch>     *   switch+create into <newBranch>
+    $>  git checkout <tagID||brnID>     *   switch BRANCH or TAG
 
-â€¢   c:  clone
-    $>git clone https://github.com/phassen64/tutor_git.git tutor_git 
-
-â€¢   c:  commit
+•   c:  commit
     $>  git commit                      *   commit merge conflict
     $>  git commit -m "<str>" <file>    *   update modified singleFile in Repository
-    $>  git commit -a -m "<Comment>"        *   update multiple files of Repository
-    $>  git commit --all -m "<Comment>"     *   dito
-    $>  git commit â€“-amend              * show toBe committed files in vi
+    $>  git commit -m "<Comment>" -a    *   update multiple files of Repository
+    $>  git commit -m "<Comment>" .         *   ... dito
+    $>  git commit -m "<Comment> --all"     *   ... dito2
+    $>  git commit –-amend              * show toBe committed files in vi
 
-â€¢   c:  diff
+•   c:  diff
     $>  git diff master <branch>        *    difference branch to master
 
-â€¢   c:  fetch
+•   c:  fetch
     $>  git fetch           * download server changes into memory - don't change local
 
-â€¢   c:  init 
+•   c:  init 
     $>  git init  <newGitRepository>    * neues projekt
     
-â€¢   c:  log
+•   c:  log
     $>  git log                         *   alle Commits sehen - ohne Datei-Zuordnung
     $>  git log --abbrev-commit         *   commits mit short-commitID sehen
+    $>  git log --pretty=online --grap  *   pretty log
     $>  git log --raw                   *   alle Commits sehen - MIT Datei-Zuordnung
     $>  git log -n<i>                   *   nur die letzten i Commits
     $>  git log -- <file>               *   log einer bestimmten Datei
     $>  git log -p <file>               *   log einer bestimmten Datei + diff command
 
-â€¢   c:  merge
+•   c:  merge
     $>  git merge <bBranch>             *    HEAD==master imports bBranch
     $>  git merge master                *    HEAD==bTmp; branch bTmp imports master
     $>  git merge --abort               *    cancel a merge
     $>  git mergetool                   *    merge tool
     
-â€¢   c:  mv
+•   c:  mv
     $>  git mv [-v] <source> <destination>  * rename a file
 
-â€¢   c:  pull
+•   c:  pull
     $>  git pull            * download server changes into local => fetch
 
-â€¢   c:  push        
+•   c:  push        
     $>  git push                            * lokale Version auf den remote-Server kopieren
     $>  git push origin master                          * remote branch aktualisieren
     $>  git push origin HEAD                            * remote branch mit akuellem HEAD
-    $>  git push origin --delete <bRemoteBranch>        * remote branch lÃ¶schen
+    $>  git push origin --delete <bRemoteBranch>        * remote branch löschen
+    $>  git push --tags                     * push tags
 
-â€¢   c:  reset       => revert        
+•   c:  rebase      #   special merge 
+    $>  git rebase --about              *   undo rebase
+    $>  git rebase bMaster              *   auf einem Feature-Branch den Master importieren
+
+•   c:  reset       => revert        
     $>  git reset <ID>
-    $>  git reset --hard HEAD       *   lokales File zurÃ¼cksetzen - not committed
-    $>  git reset â€“hard <ID>        *   reset committed File 
+    $>  git reset --hard HEAD       *   lokales File zurücksetzen - not committed
+    $>  git reset –hard <ID>        *   reset committed File 
 
-â€¢   c:  restore
+•   c:  restore
     $>  git restore <file>          *   restore uncommitted File == history cleared 
                     
-â€¢   c:  revert
+•   c:  revert
     $>  git revert <ID>             *   reset committed File - history untouched
 
-â€¢   c:  show  
+•   c:  show  
     $>  git show <ID>               *   ID={commitID|tagID}
 
-â€¢   c:  stash                       *   stapel-Speicher Ã¼ber den Commit hinweg
+•   c:  stash                       *   stapel-Speicher über den Commit hinweg
     $>  git stash                   *   *stash++ := mem; == push
     $>  git stash clear             *   memset(stash,0,sizeof(stash))
     $>  git stash apply             *   mem:=*stash
@@ -495,9 +499,10 @@ $>  rm --force --recursive tutor_git    *   rmDir
     $>  git stash push              *   *stash++ := mem
     $>  git stash pop               *   mem := *stash--   == git apply&&drop
 
-â€¢   c:  status 
+•   c:  status 
     $>  git status                      *   wichtigstes Kommando ?uptodate?
 
-â€¢   c:  tag <tagID>
-    $>  git tag v1.0-lw                 *   lightweight
-    $>  git tag -a v1.0 -m â€œrelease version 4.0â€    * annotated
+•   c:  tag 
+    $>  git tag <tagId>            *   add lightweight tag tagId="tTmp"
+    $>  git tag -a <tagId> -m "annotad tag"    * annotated
+    $>  git tag --delete <tagId>   *   delete tag with tagId
