@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="31">
+  <config>
+    <saved-logs>5</saved-logs>
+    <build-directory-naming-strategy>COMPRESSED</build-directory-naming-strategy>
+  </config>
+  <project-id>1648717080</project-id>
+  <factor-config-options>0</factor-config-options>
+  <environment name="BCD" type="UNIT">
+    <language>2</language>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>playground_test_memmert/build/793217224</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="BUZZER_TOGGLE" type="UNIT">
+    <language>2</language>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>playground_test_memmert/build/3424278438</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="CAN_ABSTRACTION" type="UNIT">
+    <language>2</language>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>playground_test_memmert/build/1221776122</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="CORE_TIMER" type="UNIT">
+    <language>2</language>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>playground_test_memmert/build/2173700315</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="CRC_TEST_UNIT" type="UNIT">
+    <language>2</language>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>playground_test_memmert/build/2173700315/3724916092</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="DIO" type="UNIT">
+    <language>2</language>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>playground_test_memmert/build/1190643064</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="TEST_CPP" type="UNIT">
+    <language>2</language>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>playground_test_memmert/build/1782914952</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="TESTMAIN" type="UNIT">
+    <language>2</language>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>playground_test_memmert/build/3844342040</original-environment-directory>
+    </config>
+  </environment>
+  <group name="Group"/>
+  <group name="Group_1">
+    <environment name="TESTMAIN"/>
+  </group>
+  <group name="Group_2">
+    <environment name="BCD"/>
+    <environment name="BUZZER_TOGGLE"/>
+    <environment name="CAN_ABSTRACTION"/>
+    <environment name="CORE_TIMER"/>
+    <environment name="CRC_TEST_UNIT"/>
+    <environment name="DIO"/>
+    <environment name="TEST_CPP"/>
+  </group>
+  <compiler>
+    <compiler>
+      <name>GNU_Target_Bare_Board_ARM_Cortex-M4_Trace32_Simulator_C</name>
+      <config>
+        <config>
+          <key>VCAST_OUTPUT_BUFFER_SIZE</key>
+          <value>200</value>
+          <key>SOURCE_EXTENSION</key>
+          <value>.cpp</value>
+          <key>C_EXECUTE_CMD</key>
+          <value>execute_with_gdb.bat</value>
+          <key>C_COMPILER_TAG</key>
+          <value>GNUARM_CORTEXM4_T32_C</value>
+          <key>C_DEFINE_LIST</key>
+          <value>RELEASE=1 DEBUG=1 EW_FRAME_BUFFER_COLOR_FORMAT=EW_FRAME_BUFFER_COLOR_FORMAT_RGB565 HSE_VALUE=25000000 USE_HAL_DRIVER EW_SURFACE_ROTATION=180 EW_USE_FREE_RTOS=0 PFERFORM_SD_RAMTEST_AT_START=0 flash_layout STM32F439xx ARM_MATH_CM4 STM32F439ZG VCAST_CUSTOM_OUTPUT=vcast_custom_output VCAST_CUSTOM_INPUT=vcast_custom_input VCAST_INPUT_BUFFER_SIZE=2000 VCAST_OUTPUT_VIA_DEBUGGER VCAST_NO_SPRINTF</value>
+          <key>C_PREPROCESS_CMD</key>
+          <value>arm-eabi-gcc -E -C --specs=nano.specs --specs=nosys.specs -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16</value>
+          <key>C_COMPILE_CMD</key>
+          <value>arm-eabi-gcc -c -g --specs=nano.specs --specs=nosys.specs -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16</value>
+          <key>C_LINK_CMD</key>
+          <value>arm-eabi-gcc -g --specs=nano.specs --specs=nosys.specs -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16</value>
+          <key>C_LINK_OPTIONS</key>
+          <value>-Wl,-Map=vcast.map -TSTM32F439ZG_flash.lds</value>
+          <key>EXECUTABLE_EXTENSION</key>
+          <value>.elf</value>
+          <key>VCAST_ENVIRONMENT_FILES</key>
+          <value>$(VCAST_PRJ_DIR)\support_files\STM32F439ZG_flash.lds,$(VCAST_PRJ_DIR)\support_files\execute_with_gdb.bat,$(VCAST_PRJ_DIR)\support_files\gdb.txt,$(VCAST_PRJ_DIR)\support_files\vcast_conv_gdb_hex_ascii.py</value>
+          <key>VCAST_REPOSITORY</key>
+          <value>D:\TestingEvaluation\TestVectorcast\Repo</value>
+          <key>VCAST_NO_STDIN</key>
+          <value>FALSE</value>
+          <key>VCAST_STDIO</key>
+          <value>TRUE</value>
+          <key>VCAST_STARTUP_FILE</key>
+          <value>$(VCAST_PRJ_DIR)\support_files\startup_stm32f439xx.c;$(VCAST_PRJ_DIR)\support_files\system_stm32f4xx.c;$(VCAST_PRJ_DIR)\support_files\vcast_custom_output.c;$(VCAST_PRJ_DIR)\support_files\vcast_trigger_breakpoint.c;$(VCAST_PRJ_DIR)\support_files\vcast_custom_input.c</value>
+        </config>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)</search-directory>
+      </config>
+    </compiler>
+    <testsuite name="TestSuite">
+      <group name="Group_1"/>
+    </testsuite>
+  </compiler>
+  <compiler>
+    <compiler>
+      <name>GNU_Target_Bare_Board_ARM_Cortex-M4_Trace32_Simulator_C++_1</name>
+      <config>
+        <config>
+          <key>WHITEBOX</key>
+          <value>YES</value>
+          <key>COVERAGE_TYPE</key>
+          <value>STATEMENT+BRANCH</value>
+          <key>VCAST_OUTPUT_BUFFER_SIZE</key>
+          <value>200</value>
+          <key>SOURCE_EXTENSION</key>
+          <value>.cpp</value>
+          <key>C_EXECUTE_CMD</key>
+          <value>execute_with_gdb.bat</value>
+          <key>C_COMPILER_TAG</key>
+          <value>GNUARM_CORTEXM4_T32_CPP</value>
+          <key>C_DEFINE_LIST</key>
+          <value>RELEASE=1 DEBUG=1 EW_FRAME_BUFFER_COLOR_FORMAT=EW_FRAME_BUFFER_COLOR_FORMAT_RGB565 HSE_VALUE=25000000 USE_HAL_DRIVER EW_SURFACE_ROTATION=180 EW_USE_FREE_RTOS=0 PFERFORM_SD_RAMTEST_AT_START=0 flash_layout STM32F439xx ARM_MATH_CM4 STM32F439ZG VCAST_CUSTOM_OUTPUT=vcast_custom_output VCAST_CUSTOM_INPUT=vcast_custom_input VCAST_INPUT_BUFFER_SIZE=2000 VCAST_OUTPUT_VIA_DEBUGGER VCAST_NO_SPRINTF</value>
+          <key>C_PREPROCESS_CMD</key>
+          <value>arm-eabi-g++ -E -C --specs=nano.specs --specs=nosys.specs -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16</value>
+          <key>C_ALT_PREPROCESS_CMD</key>
+          <value>arm-eabi-gcc -E -C -mcpu=cortex-m4</value>
+          <key>C_COMPILE_CMD</key>
+          <value>arm-eabi-g++ -c -g --specs=nano.specs --specs=nosys.specs -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16</value>
+          <key>C_ALT_COMPILE_CMD</key>
+          <value>arm-eabi-gcc -c -g -mcpu=cortex-m4</value>
+          <key>C_LINK_CMD</key>
+          <value>arm-eabi-g++ -g --specs=nano.specs --specs=nosys.specs -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16</value>
+          <key>C_LINK_OPTIONS</key>
+          <value>-Wl,-Map=vcast.map -TSTM32F439ZG_flash.lds</value>
+          <key>EXECUTABLE_EXTENSION</key>
+          <value>.elf</value>
+          <key>VCAST_ENVIRONMENT_FILES</key>
+          <value>$(VCAST_PRJ_DIR)\support_files\STM32F439ZG_flash.lds,$(VCAST_PRJ_DIR)\support_files\execute_with_gdb.bat,$(VCAST_PRJ_DIR)\support_files\gdb.txt,$(VCAST_PRJ_DIR)\support_files\vcast_conv_gdb_hex_ascii.py,D:\vcastmemmerttesting\memmerttesting\delete_me\startup_stm32f439xx.o</value>
+          <key>VCAST_REPOSITORY</key>
+          <value>D:\TestingEvaluation\TestVectorcast\Repo</value>
+          <key>VCAST_NO_STDIN</key>
+          <value>FALSE</value>
+          <key>VCAST_STDIO</key>
+          <value>TRUE</value>
+          <key>VCAST_STARTUP_FILE</key>
+          <value>$(VCAST_PRJ_DIR)\support_files\system_stm32f4xx.c;$(VCAST_PRJ_DIR)\support_files\vcast_custom_output.c;$(VCAST_PRJ_DIR)\support_files\vcast_trigger_breakpoint.c;$(VCAST_PRJ_DIR)\support_files\vcast_custom_input.c;$(VCAST_PRJ_DIR)\support_files\startup_stm32f439xx.c</value>
+        </config>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\Inc</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\Drivers\cmsis\Include</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\Drivers\cmsis\Device\ST\STM32F4xx\Include</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\Drivers\STM32F4xx_HAL_Driver\Inc</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\PlatformPackage\RTE</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\PlatformPackage\RGB565</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\Drivers\TargetSpecific</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\applcore\Common\Core</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\applcore</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\logger</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\Data</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\MCAL\dio</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\applcore\Common\PluginFactory</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\MCAL\sts3x</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\MCAL\candllight</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\MCAL\sts3x\sts3x-2.0.0</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\MCAL\tshy461x</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\Services\Plugins</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\Services\Application</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\MCAL\hwpwm</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\evil</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\MCAL\eventmemory</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\MCAL\nvm</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\WTBGUI\EWSource</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\MCAL\buzzer</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\WTBGUI\GeneratedCode</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\MCAL\independentwatchdog</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\dally</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\MCAL\bcd</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\MCAL\CommonMCAL</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\MCAL\crc</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\Waterbath</search-directory>
+        <search-directory type="TESTABLE_SOURCE_DIR">$(SRC_DIR)\Src</search-directory>
+      </config>
+    </compiler>
+    <testsuite name="TestSuite">
+      <group name="Group_2"/>
+    </testsuite>
+  </compiler>
+</project>
