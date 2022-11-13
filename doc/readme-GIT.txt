@@ -3,6 +3,12 @@
 +   Workflow
     make<User>-commit<User>-push<User>-pullRequest<User>-pull<TeamLeader>
 
++   Speicherbereiche
+    •   stage       -   Arbeitskopie
+    •   stash       -   Geheimversteck (Stapel-Lager)
+    •   repository  -   lokales -   commited changes
+    •   repository  -   remote  -   push
+
 =   Erstellung neuer Dateien
     1.  $>echo "hello" > file1.txt  ==>     ins Arbeitsverzeichnis
     2.  $>git-add file.1.txt        ==>     ins den Staging-Bereich 
@@ -13,6 +19,13 @@
     1.  $>echo "samba" >> file1.txt ==>     nur im Arbeitsverzeichnis
     2.  $>git-commit file1.txt      ==>     Änderungen im Repository
     3.  $>git-push file1.txt        ==>     Änderungen in git-HUB     
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+=== m:  url
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+    https://book.git-scm.com/docs/gitglossary                                       
+    https://book.git-scm.com/docs/git-tag
+    https://book.git-scm.com/docs/git-branch
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 === m:  Glossar
@@ -436,6 +449,9 @@ $>  rm --force --recursive tutor_git    *   rmDir
 
 •   c:  diff
     $>  git diff master <branch>        *    difference branch to master
+
+•   c:  discard
+    $>  git discard                     *    restore old repository.local
 
 •   c:  fetch
     $>  git fetch           * download server changes into memory - don't change local
