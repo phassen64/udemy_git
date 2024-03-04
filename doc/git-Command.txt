@@ -1,0 +1,122 @@
+=== git commands
+
+=== UNIX <cmd>=:c
+
+•   $>  cat <file>                      *   show file content
+    $>  clear                           *   clear screen
+    $>  ls -al                          *   list
+
+•   c:remove
+    $>  rm ls -al                       *   list
+    $>  rm --force --recursive tutor_git    *   rmDir
+
+=== git <cmd>=:c
+    Legende:   ID:=commitID
+
+•   c:  add
+    $>  git add <file>                  *   add single file into STASH einchecken
+    $>  git add <file1> <file2>...      *   copy local files into STASH
+    $>  git add --all                   *   add incl.subDir into STASH
+    $>  git add .                       *   sämtliche neue Dateien => stash
+
+•   c:  blame               #  Wer ist verantwortlich ?
+    $>  git blame <file1>               *   Vom wem Änderungen an Datei
+
+•   c:  branch          
+    $>  git branch                      *   view active branches and branch "master"
+    $>  git branch -a                   *   show local and remote branches 
+    $>  git branch <newBranch>          *   create new branch, but no switch 
+    $>  git branch -d <mergedBranch>    *   remove merged branch
+    $>  git branch -D <testedBranch>    *   remove branch without a merge
+    $>  git branch -m main master       *   rename branch "main" into "master"   
+
+•   c:  checkout
+    $>  git checkout <anyBranch>        *   switch into <anyBranch>
+    $>  git checkout HEAD <file>        *   lokales File zurücksetzen - not committed
+    $>  git checkout master             *   switch branch to HEAD
+    $>  git checkout -b <newBranch>     *   switch+create into <newBranch>
+    $>  git checkout <tagID||brnID>     *   switch BRANCH or TAG
+
+•   c:  commit
+    $>  git commit                      *   commit merge conflict
+    $>  git commit -m "<str>" <file>    *   update modified singleFile in Repository
+    $>  git commit -m "<Comment>" -a    *   update multiple files of Repository
+    $>  git commit -m "<Comment>" .         *   ... dito
+    $>  git commit -m "<Comment> --all"     *   ... dito2
+    $>  git commit –-amend              * show toBe committed files in vi
+
+•   c:  diff
+    $>  git diff master <branch>        *    difference branch to master
+
+•   c:  discard
+    $>  git discard                     *    restore old repository.local
+
+•   c:  fetch
+    $>  git fetch           * download server changes into memory - don't change local
+
+•   c:  init 
+    $>  git init  <newGitRepository>    * neues projekt
+    
+•   c:  log
+    $>  git log                         *   alle Commits sehen - ohne Datei-Zuordnung
+    $>  git log --abbrev-commit         *   commits mit short-commitID sehen
+    $>  git log --pretty=online --grap  *   pretty log
+    $>  git log --raw                   *   alle Commits sehen - MIT Datei-Zuordnung
+    $>  git log -n<i>                   *   nur die letzten i Commits
+    $>  git log -- <file>               *   log einer bestimmten Datei
+    $>  git log -p <file>               *   log einer bestimmten Datei + diff command
+
+•   c:  merge
+    $>  git merge <bBranch>             *    HEAD==master imports bBranch
+    $>  git merge master                *    HEAD==bTmp; branch bTmp imports master
+    $>  git merge --abort               *    cancel a merge
+    $>  git mergetool                   *    merge tool
+    
+•   c:  mv
+    $>  git mv [-v] <source> <destination>  * rename a file
+
+•   c:  pull
+    $>  git pull            * download server changes into local => fetch
+
+•   c:  push        
+    $>  git push                            * lokale Version auf den remote-Server kopieren
+    $>  git push origin master                          * remote branch aktualisieren
+    $>  git push origin HEAD                            * remote branch mit akuellem HEAD
+    $>  git push origin --delete <bRemoteBranch>        * remote branch löschen
+    $>  git push --tags                     * push tags
+
+•   c:  rebase      #   special merge 
+    $>  git rebase --about              *   undo rebase
+    $>  git rebase bMaster              *   auf einem Feature-Branch den Master importieren
+
+•   c:  reset       => revert        
+    $>  git reset <ID>
+    $>  git reset --hard HEAD       *   lokales File zurücksetzen - not committed
+    $>  git reset –hard <ID>        *   reset committed File 
+
+•   c:  restore
+    $>  git restore <file>          *   restore uncommitted File == history cleared 
+                    
+•   c:  revert
+    $>  git revert <ID>             *   reset committed File - history untouched
+
+•   c:  show  
+    $>  git show <ID>               *   ID={commitID|tagID}
+
+•   c:  stash                       *   stapel-Speicher über den Commit hinweg
+    $>  git stash                   *   *stash++ := mem; == push
+    $>  git stash clear             *   memset(stash,0,sizeof(stash))
+    $>  git stash apply             *   mem:=*stash
+    $>  git stash drop              *   --stash
+    $>  git stash list              *   zeigt STASH-list an - git log
+    $>  git stash show              *   print *stash
+    $>  git stash push              *   *stash++ := mem
+    $>  git stash pop               *   mem := *stash--   == git apply&&drop
+
+•   c:  status 
+    $>  git status                      *   wichtigstes Kommando ?uptodate?
+
+•   c:  tag 
+    $>  git tag <tagId>            *   add lightweight tag tagId="tTmp"
+    $>  git tag -a <tagId> -m "annotad tag"    * annotated
+    $>  git tag --delete <tagId>   *   delete tag with tagId
