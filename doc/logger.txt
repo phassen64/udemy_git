@@ -340,4 +340,6 @@ https://blog.datamics.com/github-anleitung-zum-umstellen-von-push-mit-passwort-a
 <<< !date:<2024-03-04>:Mo 
 
 +   neuer KursBeginn Wiederholung
+    1. starten von GIT bzw MinGW
+    2. $> cd /d/repository/GIT/udemy/gitExercise
     

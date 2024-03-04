@@ -1,5 +1,5 @@
 === readme 
-    udemy.git.course
+    content of : udemy.git.course
 
     •   m:  Kursübersicht
     •   m:  GIT Kursunterlagen
