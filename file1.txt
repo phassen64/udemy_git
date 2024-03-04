@@ -10,10 +10,4 @@ Igor
 Julian
 Kurt
 Lilia
-<<<<<<< HEAD
-Auto1
-Auto2
-Auto3
 
-=======
->>>>>>> parent of d298b46 (auto1)
