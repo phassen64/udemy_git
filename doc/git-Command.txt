@@ -25,16 +25,16 @@
 •   c:  branch          
     $>  git branch                      *   view active branches and branch "master"
     $>  git branch -a                   *   show local and remote branches 
-    $>  git branch <newBranch>          *   create new branch, but no switch 
+    $>  git branch <brnID>              *   create new branch, but no switch 
     $>  git branch -d <mergedBranch>    *   remove merged branch
     $>  git branch -D <testedBranch>    *   remove branch without a merge
     $>  git branch -m main master       *   rename branch "main" into "master"   
 
-•   c:  checkout
-    $>  git checkout <anyBranch>        *   switch into <anyBranch>
+•   c:  checkout    
+    $>  git checkout -b <brnID>         *   switch+create into newBranch brnID
+    $>  git checkout <brnID>            *   switch into branch:brnID
+    $>  git checkout master             *   switch into branch:master
     $>  git checkout HEAD <file>        *   lokales File zurücksetzen - not committed
-    $>  git checkout master             *   switch branch to HEAD
-    $>  git checkout -b <newBranch>     *   switch+create into <newBranch>
     $>  git checkout <tagID||brnID>     *   switch BRANCH or TAG
 
 •   c:  commit
@@ -68,7 +68,7 @@
     $>  git log -p <file>               *   log einer bestimmten Datei + diff command
 
 •   c:  merge
-    $>  git merge <bBranch>             *    HEAD==master imports bBranch
+    $>  git merge <brnID>               *    HEAD==master imports bBranch
     $>  git merge master                *    HEAD==bTmp; branch bTmp imports master
     $>  git merge --abort               *    cancel a merge
     $>  git mergetool                   *    merge tool
