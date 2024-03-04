@@ -104,6 +104,7 @@
 •   c:  revert
     $>  git revert <cmmID>          *   revert a special commit -  history untouched
                                     *   before and after unchanged
+    $>  git revert HEAD~3
 
 •   c:  show  
     $>  git show <ID>               *   ID={cmmID|tagID}
