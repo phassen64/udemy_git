@@ -7,6 +7,8 @@
             s:  Kapitel 3: GIT Grundlagen
             s:  Kapitel 4: GIT Wiederherstellen
             s:  Kapitel 5: Branching
+            s:  Kapitel 6: Konfiguration
+            s:  Kapitel 7: Tipps
 
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
