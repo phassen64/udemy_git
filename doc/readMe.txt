@@ -70,14 +70,14 @@
 
 =   Erstellung neuer Dateien
     1.  $>echo "hello" > file1.txt  ==>     ins Arbeitsverzeichnis
-    2.  $>git-add file.1.txt        ==>     ins den Staging-Bereich 
-    3.  $>git-commit file1.txt      ==>     ins Repository git push 
-    4.  $>git-push file1.txt        ==>     zum Remote-Server zB git-HUB     
+    2.  $>git add file.1.txt        ==>     ins den Staging-Bereich 
+    3.  $>git commit file1.txt      ==>     ins Repository git push 
+    4.  $>git push file1.txt        ==>     zum Remote-Server zB git-HUB     
     
 =   Änderungen an bestehenden Dateien
     1.  $>echo "samba" >> file1.txt ==>     nur im Arbeitsverzeichnis
-    2.  $>git-commit file1.txt      ==>     Änderungen im Repository
-    3.  $>git-push file1.txt        ==>     Änderungen in git-HUB     
+    2.  $>git commit file1.txt      ==>     Änderungen im Repository
+    3.  $>git push file1.txt        ==>     Änderungen in git-HUB     
 
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
