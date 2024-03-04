@@ -342,4 +342,7 @@ https://blog.datamics.com/github-anleitung-zum-umstellen-von-push-mit-passwort-a
 +   neuer KursBeginn Wiederholung
     1. starten von GIT bzw MinGW
     2. $> cd /d/repository/GIT/udemy/gitExercise
-    
+
++   Server aktualisieren
+    $> git push https://github.com/phassen64/udemy_git.git
+    $> git push origin master

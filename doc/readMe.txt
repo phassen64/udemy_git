@@ -70,14 +70,14 @@
 
 =   Erstellung neuer Dateien
     1.  $>echo "hello" > file1.txt  ==>     ins Arbeitsverzeichnis
-    2.  $>git-add file.1.txt        ==>     ins den Staging-Bereich 
-    3.  $>git-commit file1.txt      ==>     ins Repository git push 
-    4.  $>git-push file1.txt        ==>     zum Remote-Server zB git-HUB     
+    2.  $>git add file.1.txt        ==>     ins den Staging-Bereich 
+    3.  $>git commit file1.txt      ==>     ins Repository git push 
+    4.  $>git push file1.txt        ==>     zum Remote-Server zB git-HUB     
     
 =   Änderungen an bestehenden Dateien
     1.  $>echo "samba" >> file1.txt ==>     nur im Arbeitsverzeichnis
-    2.  $>git-commit file1.txt      ==>     Änderungen im Repository
-    3.  $>git-push file1.txt        ==>     Änderungen in git-HUB     
+    2.  $>git commit file1.txt      ==>     Änderungen im Repository
+    3.  $>git push file1.txt        ==>     Änderungen in git-HUB     
 
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
@@ -204,29 +204,29 @@
 *   Git checkout & reset
     cd football
     git status
-    echo "Fehlerhafte Änderung" >> datei_1.txt
-    cat datei_1.txt
+    echo "Fehlerhafte Änderung" >> file1.txt
+    cat file1.txt
     git status    
-    git checkout HEAD datei_1.txt   * Änderung zurücknehmen
-    cat datei_1.txt
+    git checkout HEAD file1.txt   * Änderung zurücknehmen
+    cat file1.txt
     git status
-    echo "Noch eine fehlerhafte Änderung" >> datei_1.txt
-    cat datei_1.txt
+    echo "Noch eine fehlerhafte Änderung" >> file1.txt
+    cat file1.txt
     git reset --hard HEAD    * Änderung zurücknehmen mit HARD
-    cat datei_1.txt
-    echo "Eine fehlerhafte Änderung im Arbeitsverzeichnis" >> datei_2.txt
+    cat file1.txt
+    echo "Eine fehlerhafte Änderung im Arbeitsverzeichnis" >> file2.txt.txt
     ls
     git reset --hard HEAD   * Änderung zurücknehmen mit HARD
     ls
-    rm datei_2.txt
+    rm file2.txt.txt
 
 
 *   git reset & revert
     # Passe hier deine <Commit-ID> an
     cd football
     git status
-    echo "Fehlerhafte Änderung" >> datei_1.txt
-    cat datei_1.txt
+    echo "Fehlerhafte Änderung" >> file1.txt
+    cat file1.txt
     git commit -m "Fehler"
     git status
     git log
@@ -234,8 +234,8 @@
     git status
     git log
     clear
-    echo "Fehlerhafte Änderung" >> datei_1.txt
-    cat datei_1.txt
+    echo "Fehlerhafte Änderung" >> file1.txt
+    cat file1.txt
     git commit -m "Fehler"
     git status
     git log
@@ -338,7 +338,7 @@
 
 *   git Stash
     git status
-    echo "Änderung für das stash Beispiel" >> datei_1.txt
+    echo "Änderung für das stash Beispiel" >> file1.txt
     git stash # git stash save
     vim README.md
     git commit -m „fix readme“ .

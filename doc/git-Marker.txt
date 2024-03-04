@@ -78,9 +78,9 @@
     $>  git log -n5
 
 +   Alle Änderungen einer bestimmten Datei anzeigen
-        $>  git log -p <DATEI>  # mit Comment
+        $>  git log -p <FILE>  # mit Comment
     oder :
-        $>  git log -- <DATEI>
+        $>  git log -- <FILE>
     
 +   Wer hat was und wann an der Datei geändert?
     $>git blame <DATEI>
@@ -89,7 +89,7 @@
     $>  git log --abbrev-commit
 
 +   Commit Differenz mit Commit-ID ansehen
-    $>  git show <commitID>
+    $>  git show <cmmID>
 
 
 =*= s:  Branches und Tags
@@ -104,7 +104,7 @@
     $>  git branch <BRANCH>
 
 +   Lokalen Branch löschen
-    $>  git branch -d BRANCH
+    $>  git branch -d <BRANCH>
 
 +   Neuen Tag erzeugen
     $>  git tag TAG
@@ -181,19 +181,19 @@
 
 +   Commit rückgängig machen mit einem neuen Commit, 
         der alle Änderungen verwirft
-    $>  git revert <commitID>
+    $>  git revert <cmmID>
 
 +   Zurücksetzen auf den Head und alle Änderungen verwerfen
     $>  git reset –hard HEAD
 
 +   Zurücksetzen auf einen Commit und alle Änderungen verwerfen
-    $>  git reset –hard <commitID>
+    $>  git reset –hard <cmmID>
 
 +   Zurücksetzen auf ein Commit, ohne die Äenderungen anzuwenden
-    $>  git reset <commitID>
+    $>  git reset <cmmID>
 
 +   Zurücksetzen auf ein Commit ohne Löschen lokaler Änderungen
-    $>  git reset –keep <commitID>
+    $>  git reset –keep <cmmID>
 
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 === m:  Glossar

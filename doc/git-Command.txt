@@ -11,7 +11,7 @@
     $>  rm --force --recursive tutor_git    *   rmDir
 
 === git <cmd>=:c
-    Legende:   ID:=commitID
+    Legende:   ID:=cmmID,brnID,tagID
 
 •   c:  add
     $>  git add <file>                  *   add single file into STASH einchecken
@@ -63,7 +63,7 @@
     $>  git log --pretty=online --grap  *   pretty log
     $>  git log --raw                   *   alle Commits sehen - MIT Datei-Zuordnung
     $>  git log -n<i>                   *   nur die letzten i Commits
-    $>  git log -- <file>               *   log einer bestimmten Datei
+    $>  git log <file>               *   log einer bestimmten Datei
     $>  git log -p <file>               *   log einer bestimmten Datei + diff command
 
 •   c:  merge
@@ -72,8 +72,11 @@
     $>  git merge --abort               *    cancel a merge
     $>  git mergetool                   *    merge tool
     
-•   c:  mv
+•   c:  mv * rename
     $>  git mv [-v] <source> <destination>  * rename a file
+
+•   c:  rm * remove
+    $>  git rm <file>                   * remove a file
 
 •   c:  pull
     $>  git pull            * download server changes into local => fetch
