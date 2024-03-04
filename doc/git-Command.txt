@@ -40,9 +40,9 @@
 •   c:  commit
     $>  git commit                      *   commit merge conflict
     $>  git commit -m "<str>" <file>    *   update modified singleFile in Repository
-    $>  git commit -m "<Comment>" -a    *   update multiple files of Repository
-    $>  git commit -m "<Comment>" .         *   ... dito
-    $>  git commit -m "<Comment> --all"     *   ... dito2
+    $>  git commit -m <comment> -a      *   update multiple files of Repository
+    $>  git commit -m <comment> .       *   ... dito
+    $>  git commit -m <comment> --all   *   ... dito2
     $>  git commit –-amend              * show toBe committed files in vi
 
 •   c:  diff
