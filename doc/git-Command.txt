@@ -93,19 +93,19 @@
     $>  git rebase --about              *   undo rebase
     $>  git rebase bMaster              *   auf einem Feature-Branch den Master importieren
 
-•   c:  reset       => revert        
+•   c:  reset
     $>  git reset <ID>
     $>  git reset --hard HEAD       *   lokales File zurücksetzen - not committed
-    $>  git reset –-hard <cmmID>    *   reset committed File 
+    $>  git reset –-hard <cmmID>    *   reset myBranch TO commit
 
 •   c:  restore
     $>  git restore <file>          *   restore uncommitted File == history cleared 
                     
 •   c:  revert
-    $>  git revert <ID>             *   reset committed File - history untouched
+    $>  git revert <cmmID>          *   revert TO commit -  history untouched
 
 •   c:  show  
-    $>  git show <ID>               *   ID={commitID|tagID}
+    $>  git show <ID>               *   ID={cmmID|tagID}
 
 •   c:  stash                       *   stapel-Speicher über den Commit hinweg
     $>  git stash                   *   *stash++ := mem; == push
