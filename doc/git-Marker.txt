@@ -174,7 +174,7 @@
 
 +   Alle lokalen Änderungen im Arbeitsverzeichnis verwerfen
     (Kann nicht rückgängig gemacht werden)
-    $>  git reset –hard HEAD
+    $>  git reset –-hard HEAD
 
 +   Lokale Änderungen einer spezifischen Datei verwerfen
     $>  git checkout HEAD <file>

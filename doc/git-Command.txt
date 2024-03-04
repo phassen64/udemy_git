@@ -63,7 +63,8 @@
     $>  git log --pretty=online --grap  *   pretty log
     $>  git log --raw                   *   alle Commits sehen - MIT Datei-Zuordnung
     $>  git log -n<i>                   *   nur die letzten i Commits
-    $>  git log <file>               *   log einer bestimmten Datei
+    $>  git log <file>                  *   log einer existierenden Datei
+    $>  git log -- <file>               *   log einer eventuell gelöschten Datei
     $>  git log -p <file>               *   log einer bestimmten Datei + diff command
 
 •   c:  merge
@@ -95,7 +96,7 @@
 •   c:  reset       => revert        
     $>  git reset <ID>
     $>  git reset --hard HEAD       *   lokales File zurücksetzen - not committed
-    $>  git reset –hard <ID>        *   reset committed File 
+    $>  git reset –-hard <cmmID>    *   reset committed File 
 
 •   c:  restore
     $>  git restore <file>          *   restore uncommitted File == history cleared 
