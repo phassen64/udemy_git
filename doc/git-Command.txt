@@ -43,13 +43,12 @@
     $>  git commit -m <comment> -a      *   update multiple files of Repository
     $>  git commit -m <comment> .       *   ... dito
     $>  git commit -m <comment> --all   *   ... dito2
-    $>  git commit –-amend              * show toBe committed files in vi
+    $>  git commit –-amend              *   show toBe committed files in vi
 
 •   c:  diff
     $>  git diff master <branch>        *    difference branch to master
 
-•   c:  discard
-    $>  git discard                     *    restore old repository.local
+•   c:  discard - no git command
 
 •   c:  fetch
     $>  git fetch           * download server changes into memory - don't change local
@@ -99,6 +98,7 @@
     $>  git reset –-hard <cmmID>    *   reset myBranch TO commit
 
 •   c:  restore
+    $>  git restore .               *   restore repository.local after push/pull
     $>  git restore <file>          *   restore uncommitted File == history cleared 
                     
 •   c:  revert
