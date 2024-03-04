@@ -4,4 +4,3 @@ Cleo
 Dietmar
 Erwin
 Friedrich
-Gerald
