@@ -26,8 +26,8 @@
     $>  git branch                      *   view active branches and branch "master"
     $>  git branch -a                   *   show local and remote branches 
     $>  git branch <brnID>              *   create new branch, but no switch 
-    $>  git branch -d <mergedBranch>    *   remove merged branch
-    $>  git branch -D <testedBranch>    *   remove branch without a merge
+    $>  git branch -d <mergedBranch>    *   remove branch and perform merge-check
+    $>  git branch -D <testedBranch>    *   remove branch without merge-check
     $>  git branch -m main master       *   rename branch "main" into "master"   
 
 •   c:  checkout    
