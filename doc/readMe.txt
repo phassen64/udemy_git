@@ -17,7 +17,12 @@
 
 1.  Willkommen
     •   wozu eine Versionsverwaltung
-    •   warum git?
+        +   zentrale    : CVS, SVN
+        +   dezentrale  : Git, Mercurial
+    •   Warum git?
+        +   verteilte Versionsverwaltung 
+        +   Kommando-Zeilen-System 
+            +   leichte online-Hilfe Bsp: $>git log --help
     •   Git Grundlagen : 
             fork, clone, commit, push
     •   Fehlerbehebung : reset vs revert
@@ -28,11 +33,19 @@
     
 2.  Installation
     •   git bash einrichten
-    •   git Installation mit Windows/Linux/...
+    •   git Installation mit Windows
+        $>  git branch -m main master  *   rename "main" => "master"   
+    •   git Installation mit Linux
+        $>  git clone git://git.kernel.org/pub/scm/git/git.git
 
 3.  Linux Befehle
     •   crash Kurs
-
+        $>  ls, cd, man, mkdir, cat, cp, echo, rm
+        $>  vi oder vim
+        $> 
+    •   Terminal
+        CTRL-ALT+T
+    
 4.  git hub - Schnellstart
     •   eigenes Projekt
     •   Authentifizierung mit Token - für git push

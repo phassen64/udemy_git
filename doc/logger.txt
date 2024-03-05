@@ -43,9 +43,10 @@ $>  rm --force --recursive tutor_git    *   rmDir
     usr:"phassen64"
     pwd:<!samba>
 
-+   lokal - global
++   lokal - global - system
     Es gibt ein lokales und ein globales Abbild eines
     git Repositories.
+    •   sytem - Windows %ProgramFiles%\Git
     •   lokal - der PC
     •   global - Git Hub
     Ein git-Projekt aufsetzen
@@ -87,6 +88,18 @@ https://blog.datamics.com/github-anleitung-zum-umstellen-von-push-mit-passwort-a
     $>git config --global user.name "phassen64"
     $>git config --global user.email "pluto64@e-mail.de"
     $>git config --global --list
+    Es gibt 3 verschiedende         
+        system:     C:\Program Files\Git\etc        
+        home:       C:\User\peter 
+        local:      <dirRepository>\.git
+
++   git config global typical 
+    $>git config --global 
+    ...
+        remote.origin.url=https://github.com/phassen64/udemy_git.git
+        remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+        branch.master.remote=origin
+        branch.master.merge=refs/heads/master
     
 +   $>cd $HOME
     $>mkdir git    
@@ -346,3 +359,88 @@ https://blog.datamics.com/github-anleitung-zum-umstellen-von-push-mit-passwort-a
 +   Server aktualisieren
     $> git push https://github.com/phassen64/udemy_git.git
     $> git push origin master
+    
+<<< !date:<2024-03-05>:Di 
+
++   init new repo via debian.bash and ADD my environment
+    $>  cd /d/repository/GIT/udemy
+    $>  git init gitTmp 
+    $>  git config --global branch.master.remote "origin"
+    $>  git config --list
+    $>  git config --global --list
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&    
+    FILE: %ProgramFiles%\Git\etc\.gitconfig
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&    
+
+[diff "astextplain"]
+	textconv = astextplain
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[http]
+	sslBackend = openssl
+	sslCAInfo = C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+[core]
+	autocrlf = true
+	fscache = true
+	symlinks = false
+[pull]
+	rebase = false
+[credential]
+	helper = manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[init]
+	defaultBranch = master
+    
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&    
+    FILE: $HOME\.gitconfig
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&    
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = phassen64
+	email = pluto64@e-mail.de
+[core]
+	autocrlf = false
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&    
+    FILE:   d/repository/GIT/udemy/GitExercises/config
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&    
+
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "origin"]
+	url = https://github.com/phassen64/udemy_git.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+
+### local ändern in linux.Debian
+
+    $>git config --local core.filemode false  
+    $>git config --local remote.origin.url "https://github.com/phassen64/udemy_git.git"
+	$>git config --local remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+	$>git config --local branch.master.remote "origin"
+	$>git config --local branch.master.merge "refs/heads/master"
+	$>git config --local core.symlinks "false"
+    $>git config --global user.name "peter"
+
+
+
+    
+
+    

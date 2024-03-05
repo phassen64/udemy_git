@@ -29,6 +29,7 @@
 
 +   Ein neues lokales Repository erzeugen
     $>  git init
+    
 
 +   Ein existierendes Repository klonen
     $>git clone ssh://nutzer@domain.com/repository.git

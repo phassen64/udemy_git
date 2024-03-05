@@ -11,8 +11,12 @@
     $>  rm --force --recursive tutor_git    *   rmDir
 
 === git <cmd>=:c
-    Legende:   ID:=cmmID,brnID,tagID
-
+    Legende:    ID:=cmmID,brnID,tagID
+    standard {
+        cmmID:='head'
+        brnID:='master' (or 'main')
+    }
+    
 •   c:  add
     $>  git add <file>                  *   add single file into STASH einchecken
     $>  git add <file1> <file2>...      *   copy local files into STASH
@@ -23,23 +27,23 @@
     $>  git blame <file1>               *   Vom wem Änderungen an Datei
 
 •   c:  branch          
-    $>  git branch                      *   view active branches and branch "master"
+    $>  git branch                      *   view all branches and the active one
     $>  git branch -a                   *   show local and remote branches 
     $>  git branch <brnID>              *   create new branch, but no switch 
-    $>  git branch -d <mergedBranch>    *   remove branch and perform merge-check
-    $>  git branch -D <testedBranch>    *   remove branch without merge-check
-    $>  git branch -m main master       *   rename branch "main" into "master"   
+    $>  git branch -d <brnID>           *   remove branch and perform merge-check
+    $>  git branch -D <brnID>           *   force remove branch
+    $>  git branch -m <bId1> <bId2>     *   rename branch <bId1> into <bId2>
 
 •   c:  checkout    
-    $>  git checkout -b <brnID>         *   switch+create into newBranch brnID
-    $>  git checkout <brnID>            *   switch into branch:brnID
+    $>  git checkout -b <brnID>         *   switch+create  into newBranch brnID
+    $>  git checkout <brnID>            *   restore+switch into branch:brnID
     $>  git checkout master             *   switch into branch:master
     $>  git checkout HEAD <file>        *   lokales File zurücksetzen - not committed
     $>  git checkout <tagID||brnID>     *   switch BRANCH or TAG
 
 •   c:  commit
     $>  git commit                      *   commit merge conflict
-    $>  git commit -m "<str>" <file>    *   update modified singleFile in Repository
+    $>  git commit -m <comment> <file>  *   update modified singleFile in Repository
     $>  git commit -m <comment> -a      *   update multiple files of Repository
     $>  git commit -m <comment> .       *   ... dito
     $>  git commit -m <comment> --all   *   ... dito2
@@ -102,8 +106,7 @@
     $>  git restore <file>          *   restore uncommitted File == history cleared 
                     
 •   c:  revert
-    $>  git revert <cmmID>          *   revert a special commit -  history untouched
-                                    *   before and after unchanged
+    $>  git revert <cmmID>          *   revert a special commit -  history untouched                                    *   before and after unchanged
     $>  git revert HEAD~3
 
 •   c:  show  
@@ -121,6 +124,9 @@
 
 •   c:  status 
     $>  git status                      *   wichtigstes Kommando ?uptodate?
+
+•   c:  switch 
+    $>  git switch <brnID>          *   set branch:=<brnID> active  git checkout ... 
 
 •   c:  tag 
     $>  git tag <tagId>            *   add lightweight tag tagId="tTmp"
