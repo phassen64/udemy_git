@@ -110,7 +110,7 @@
     $>  git show <ID>               *   ID={cmmID|tagID}
 
 •   c:  stash                       *   stapel-Speicher über den Commit hinweg
-    $>  git stash                   *   *stash++ := mem; == push
+    $>  git stash                   *   *stash++ := mem;  # deletes local changes !
     $>  git stash clear             *   memset(stash,0,sizeof(stash))
     $>  git stash apply             *   mem:=*stash
     $>  git stash drop              *   --stash
