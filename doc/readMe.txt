@@ -1,435 +1,70 @@
-=== readme 
-    content of : udemy.git.course
+=== readme
 
-    •   m:  Kursübersicht
-    •   m:  GIT Kursunterlagen
-            s:  Kapitel 2: Schnellstart
-            s:  Kapitel 3: GIT Grundlagen
-            s:  Kapitel 4: GIT Wiederherstellen
-            s:  Kapitel 5: Branching
-            s:  Kapitel 6: Konfiguration
-            s:  Kapitel 7: Tipps
+    Files:
+        •   content : Kursinhalt
+        •   logger  : logFile
 
 
-&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-=== m:  Kursübersicht
-&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-
-
-1.  Willkommen
-    •   wozu eine Versionsverwaltung
-        +   zentrale    : CVS, SVN
-        +   dezentrale  : Git, Mercurial
-    •   Warum git?
-        +   verteilte Versionsverwaltung 
-        +   Kommando-Zeilen-System 
-            +   leichte online-Hilfe Bsp: $>git log --help
-    •   Git Grundlagen : 
-            fork, clone, commit, push
-    •   Fehlerbehebung : reset vs revert
-            fork, clone, commit, push
-    •   Branch erstellen und wechseln und mergen
-    •   Stashing
-    •   Rebase
-    
-2.  Installation
-    •   git bash einrichten
-    •   git Installation mit Windows
-        $>  git branch -m main master  *   rename "main" => "master"   
-    •   git Installation mit Linux
-        $>  git clone git://git.kernel.org/pub/scm/git/git.git
-
-3.  Linux Befehle
-    •   crash Kurs
-        $>  ls, cd, man, mkdir, cat, cp, echo, rm
-        $>  vi oder vim
-        $>  sudo
-    •   Terminal
-        CTRL-ALT+T
-    
-4.  git hub - Schnellstart
-    •   eigenes Projekt
-    •   Authentifizierung mit Token - für git push
-    *   SSH for UNIX/MAX nicht Windows
-    $>  ssh-keygen -t ed25519 -C "pluto64@e-mail.de" # auf $HOME/.ssh erzeugen
-    $>  eval "$(ssh-agent -s)"      # Agent Starten
-    $>  ssh-add ~/.ssh/id_ed25519   # Key aktivieren
-    $>  cat ~/.ssh/id_ed25519.pub   # publicKey anzeigen lassen
-    $<  ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILDLtA5wYwVZtDMt2G0qvWCYS8k/8CnnhnCajcKU+QkC 
-                    pluto64@e-mail.de
-    Copy von 
-        ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILDLtA5wYwVZtDMt2G0qvWCYS8k/8CnnhnCajcKU+QkC 
-    
-5.  git Grundlagen
-    •   fork auf https://github.com/google-research/football
-    •   $>  git add .   :   mehrere Dateien gleichzeitig hinzufügen
-    •   $>  git mv      :   umbenennen
-    •   $>  git ls-files      :  viele Dateien ansehen
-    •   $>  git rm      :   löschen
-
-6.  Wiederherstellen
-    •   Historie ansehen mit log
-    •   mehr Informationen mit show
-    •   lokales Wiederherstellen mit checkout|reset
-
-7.  Branching
-    •   Branch erstellen
-    •   Merge 
-    •   Rebase 
-    •   Stash
-8.  Weitere Git Konfigurationen
-9.  Git Tipps
-10. Hurra
-        
-
-+   Workflow
-    make<User>-commit<User>-push<User>-pullRequest<User>-pull<TeamLeader>
-
-+   Speicherbereiche
+#
+#   m:storage
+#
     •   stage       -   Arbeitskopie
     •   stash       -   Geheimversteck (Stapel-Lager)
     •   repository  -   lokales -   commited changes
     •   repository  -   remote  -   push
 
-=   Erstellung neuer Dateien
-    1.  $>echo "hello" > file1.txt  ==>     ins Arbeitsverzeichnis
-    2.  $>git add file.1.txt        ==>     ins den Staging-Bereich 
-    3.  $>git commit file1.txt      ==>     ins Repository git push 
-    4.  $>git push file1.txt        ==>     zum Remote-Server zB git-HUB     
-    
-=   Änderungen an bestehenden Dateien
-    1.  $>echo "samba" >> file1.txt ==>     nur im Arbeitsverzeichnis
-    2.  $>git commit file1.txt      ==>     Änderungen im Repository
-    3.  $>git push file1.txt        ==>     Änderungen in git-HUB     
+
+#
+#   m:config
+#
+
+    *   Git kann lokal, global, system-weit konfiguriert werden..
+        •   sytem   :   %ProgramFiles%\Git
+        •   global  :   $HOME\.gitconfig
+        •   local   :   d/repository/GIT/udemy/GitExercises/config
+
+    *   ansehen
+        $>  git config --global --list
+        $>  git config --local  --list
+        $>  git config --system --list
+
+    *   ändern
+        $>git config --local core.filemode false
+        $>git config --local remote.origin.url "https://~udemy_git.git"
+	    $>git config --local remote.origin.fetch "+refs/heads/*:refs..."
+	    $>git config --local branch.master.remote "origin"
+	    $>git config --local branch.master.merge "refs/heads/master"
+    	$>git config --local core.symlinks "false"
+        $>git config --global user.name "peter"
+	    $>git config --local core.autocrlf "false"
+
+#
+#   m:history
+#
+
+    $>git log
 
 
-&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-=== m:  GIT Kursunterlagen
-&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+#
+#   m:clone vs fork
+#
 
--------------------------------------------------------------------------------    
---- s:  Kapitel 2: Schnellstart
--------------------------------------------------------------------------------    
+    +   Forking
+            creates your own copy of a repository in a
+        remote location (for example, GitHub).
+        Your own copy means that you will be able to contribute changes to
+        your copy of the repository without affecting the original repository.
 
-*   GitHub Projekt
-    git version
-    git config --global user.name "Git Kurs User"
-    git config --global user.email "git-kurs-user@datamics.com"
-    git config --global --list
-    pwd
-    mkdir git-kurs
-    cd git-kurs
-    pwd
-
-*   clone 
-    git clone https://deine-github-url
-    ls
-    cd github-demo
-    ls
-    git status
-
-*   lokaler Bereich
-    echo "Git Kurs" >> neue_datei.txt
-    ls
-    cat neue_datei.txt
-    git status
-    
-*   push into staging
-    git add neue_datei.txt
-    git status    
-    
-*   push into repository local
-    git commit -m "Initialer commit mit einer neuen Datei"
-    git status
-
-*   push into repository server
-    git push origin main
-    git status
+    +   Cloning
+            makes a local copy of a repository,
+                not your own copy.
+        A developer who wants to set up a new,
+                separate and isolated project
+        that is based on a publicly accessible Git repo should perform a fork.
 
 
--------------------------------------------------------------------------------    
---- s:  Kapitel 3: GIT Grundlagen
--------------------------------------------------------------------------------    
 
+#
+#   m:restore
+#
 
-*   fork
-    pwd
-    git clone https://deine-github-url/football
-    ls
-    cd football
-    ls
-    git status
-    
-*   bearbeiten  # Neue Zeilen in der README.md hinzufügen
-    git status
-    git commit -m "Bearbeiten der Readme, neue Zeilen" README.md
-    git status
-    git push origin main
-    
-*   Mehrere Dateien hinzufügen    
-    echo "Datei_1" >> datei_1.txt
-    echo "Datei_2" >> datei_2.tx
-    cat datei_1.txt
-    cat datei_2.txt
-    git status
-    git add .
-    git status
-    git commit
-    git status
-    git push origin main
-
-*   Dateien umbenennen
-    cd football
-    git status
-    git mv datei_2.txt datei_3.txt
-    ls
-    git status
-    git commit -m "Datei umbenannt"
-    git push origin main
-    cd ..
-
-*   Datei löschen
-    cd football
-    git status
-    clear
-    git ls-files
-    ls
-    git rm datei_3.txt
-    git status
-    git commit -m "Löschen der Datei 3“
-    git push origin main
-    cd ..
-
- 
--------------------------------------------------------------------------------    
---- s:  Kapitel 4: GIT Wiederherstellen
--------------------------------------------------------------------------------    
-
-*   Git Historie
-    pwd
-    git help log
-    cd football
-    git status
-    clear
-    git log
-    git log --abbrev-commit     # kurzer commitID anteigen
-    clear
-    ls
-    git log -- CHANGELOG
-    git log -- datei_1.txt
-    clear
-    git log --since="5 days ago"
-    clear
-    git show cc9f2c245dd49a6b84b8303e58d8453071c0c73b # Passe hier deine 
-    Commit-ID an
-    cd ..
-
-*   Git checkout & reset
-    cd football
-    git status
-    echo "Fehlerhafte Änderung" >> file1.txt
-    cat file1.txt
-    git status    
-    git checkout HEAD file1.txt   * Änderung zurücknehmen
-    cat file1.txt
-    git status
-    echo "Noch eine fehlerhafte Änderung" >> file1.txt
-    cat file1.txt
-    git reset --hard HEAD    * Änderung zurücknehmen mit HARD
-    cat file1.txt
-    echo "Eine fehlerhafte Änderung im Arbeitsverzeichnis" >> file2.txt.txt
-    ls
-    git reset --hard HEAD   * Änderung zurücknehmen mit HARD
-    ls
-    rm file2.txt.txt
-
-
-*   git reset & revert
-    # Passe hier deine <Commit-ID> an
-    cd football
-    git status
-    echo "Fehlerhafte Änderung" >> file1.txt
-    cat file1.txt
-    git commit -m "Fehler"
-    git status
-    git log
-    git revert <245345>         #   &&& revert
-    git status
-    git log
-    clear
-    echo "Fehlerhafte Änderung" >> file1.txt
-    cat file1.txt
-    git commit -m "Fehler"
-    git status
-    git log
-    git reset —hard <245345>    #   &&& reset
-    git log
-    git status
-    git push origin main
-    cd ..
-
--------------------------------------------------------------------------------    
---- s:  Kapitel 5: Branching   
--------------------------------------------------------------------------------    
-
-*   Branching
-    cd football
-    git fetch 
-    git pull
-    git status
-    git checkout main
-
-*   Branch erstellen
-    pwd
-    git checkout -b feature-abc-12-Userlogin
-    # git branch feature-abc-12-Userlogin &
-    #       git checkout feature-abc-12-Userlogin
-    echo "Mein neuer Code…" > user_login.py
-    git commit -m "abc-12: neuer user login" user_login.py
-    git status
-    git log
-
-*   Branch wechseln (hotfix)
-    ls
-    git status
-    git checkout main
-    ls
-    git checkout -b hotfix
-    git branch
-    vim Dockerfile
-    # Füge ein Kommentar hinzu
-    git commit -m „fix docker file“ Dockerfile
-
-*   Branch merge (hotfix)
-    git branch
-    ls
-    cat Dockerfile
-    git checkout main
-    cat Dockerfile
-    git merge hotfix
-    cat Dockerfile
-    git branch -d hotfix        # delete ?
-    git branch
-    git push origin main
-
-
-*   Branch merge (feature)
-
-    git checkout feature-abc-12-Userlogin
-    echo „Neue Codezeile …“ >> user_login.py
-    cat user_login.py
-    git status
-    git commit -a -m "abc-12: Erweiterung des user login"
-    git checkout main
-    git merge feature-abc-12-Userlogin
-    git branch -d feature-abc-12-Userlogin
-    git branch
-    git log
-    git push origin main
-    
-    
-*   git Rebase
-    
-    ### Teil1 
-    pwd
-    git fetch 
-    git pull
-    git status
-    git checkout main
-    git checkout -b feature-abc-20-Experiment
-    echo "Mein neuer Code…" > experiment.py
-    git commit -m "abc-20: neues Experiment„ experiment.py
-    git status
-    git log 
-    ls
-    git status
-    git checkout main
-    git branch
-    vim gfootball/replay.py
-    # Füge ein Kommentar hinzu
-    git commit -m „fix example usage“ gfootball/replay.py
-    
-    ### Teil2
-    git checkout feature-abc-20-Experiment
-    git rebase main
-    git checkout main
-    git merge feature-abc-20-Experiment
-    git branch
-    git branch -d feature-abc-20-Experiment
-    git push origin main
-
-
-*   git Stash
-    git status
-    echo "Änderung für das stash Beispiel" >> file1.txt
-    git stash # git stash save
-    vim README.md
-    git commit -m „fix readme“ .
-    git stash apply
-    git commit -m „Fertig mit den stash Änderungen“ .
-    git stash list
-    git stash drop
-    git stash list
-    
-
-
--------------------------------------------------------------------------------    
---- s:  Kapitel 6: Konfiguration 
--------------------------------------------------------------------------------    
-
-*   git init
-    pwd
-    git init neues-projekt 
-    ls
-    cd neues-projekt
-    ls
-    ls -al
-    cd .git
-    ls
-    cd ..
-    echo "Mein neues Projekt :)" >> README.md
-    mkdir code
-    echo "Mein Code“ > mein_programm.py
-    git add .
-    git commit -m "init commit" .
-    git status
-
-*   git ignore
-    pwd
-    cd neues-projekt
-    ls
-    git status
-    ls -al
-    echo "ignore_mich.txt" > .gitignore
-    echo "unwichtig" > ignore_mich.txt
-    ls -al
-    git status
-    git add .gitignore
-    git status
-    git commit -m „unwichtige Dateien ignorieren" .gitignore
-    git status
-
--------------------------------------------------------------------------------    
---- s:  Kapitel 7: Tipps
--------------------------------------------------------------------------------    
-
-*   tags
-    git tag 
-    git log --pretty=oneline --graph
-# Lightway:
-    git tag meine_v2.0
-    git log --pretty=oneline --graph
-    git tag
-    git tag --delete meine_v2.0
-# Annotate:
-    git tag -a v1.2
-    git show v1.2
-    git checkout v1.0
-    git log --pretty=oneline --graph
-    git checkout v1.2
-    git log --pretty=oneline --graph
-    git push --tags
-    
-*   blame
-    git blame gfootball/replay.py
-    
