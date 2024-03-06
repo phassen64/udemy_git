@@ -50,7 +50,7 @@
     $>  git commit –-amend              *   show toBe committed files in vi
 
 •   c:  diff
-    $>  git diff master <branch>        *    difference branch to master
+    $>  git diff master <brnID>         *    difference master<=>branchID
 
 •   c:  discard - no git command
 
@@ -86,12 +86,13 @@
     $>  git push                            * lokale Version auf den remote-Server kopieren
     $>  git push origin master                          * remote branch aktualisieren
     $>  git push origin HEAD                            * remote branch mit akuellem HEAD
-    $>  git push origin --delete <bRemoteBranch>        * remote branch löschen
+    $>  git push origin --delete <brnID>    * remote branch löschen
     $>  git push --tags                     * push tags
 
 •   c:  rebase      #   special merge
+    $>  git rebase master               *   auf einem Feature-Branch den Master importieren
+    $>  git rebase <brnID>              *   Feature => Master
     $>  git rebase --about              *   undo rebase
-    $>  git rebase bMaster              *   auf einem Feature-Branch den Master importieren
 
 •   c:  rm * remove
     $>  git rm <file>                   * remove a file

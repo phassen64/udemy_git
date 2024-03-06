@@ -511,4 +511,15 @@ https://blog.datamics.com/github-anleitung-zum-umstellen-von-push-mit-passwort-a
     $>  git branch -D b1        #   delete b1
     $>  git log --abbrev-commit -5  # =>  neuer commit
 
++   fork
+    url: https://github.com/datamics/flair
+    url: https://github.com/zalandoresearch
+    url: https://github.com/git-kurs-user/flair.git
 
++   Fork bzw clone auf git-kurs Repository
+    $>  git clone https://github.com/git-kurs-user/flair.git
+    $>  git branch
+    $<  * nur master
+    $>  git branch -a               # auch remote branch ansehen
+    $>  git checkout GH-822-xlnet   #  den remote branch verwenden
+    $>  git dif master hotfix

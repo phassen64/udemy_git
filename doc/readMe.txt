@@ -5,6 +5,11 @@
         •   logger  : logFile
 
 
+
+#
+#   m:workflow
+#
+    make<User>-commit<User>-push<User>-pullRequest<User>-pull<TeamLeader>
 #
 #   m:storage
 #
@@ -12,6 +17,20 @@
     •   stash       -   Geheimversteck (Stapel-Lager)
     •   repository  -   lokales -   commited changes
     •   repository  -   remote  -   push
+
+#
+#   m:Erstellung neuer Dateien
+#
+    1.  $>echo "hello" > file1.txt  ==>     ins Arbeitsverzeichnis
+    2.  $>git add file.1.txt        ==>     ins den Staging-Bereich
+    3.  $>git commit file1.txt      ==>     ins Repository git push
+    4.  $>git push file1.txt        ==>     zum Remote-Server zB git-HUB
+
+=   Änderungen an bestehenden Dateien
+    1.  $>echo "samba" >> file1.txt ==>     nur im Arbeitsverzeichnis
+    2.  $>git commit file1.txt      ==>     Änderungen im Repository
+    3.  $>git push file1.txt        ==>     Änderungen in git-HUB
+
 
 
 #
@@ -89,6 +108,7 @@ revert: setzt HEAD:=commitX - history erhalten und neuer revert-Commit
 
 $>git reset --hard <cmmId>
 
+
 #
 #   m:branch
 #
@@ -102,6 +122,23 @@ $>git reset --hard <cmmId>
         und commit
 3)  git checkout master
 4)  git merge b1
+    git merge origin/feature-101 -m "featureMerge"       # direkt merge
 
 
+#
+#   m:merge vs rebase
+#
+
+#   merge: Zusammenführen
+#   rebase: Wiederherstellen
+#   beide Möglichkeiten integrieren 2 branches
+
+rebase :
+    +   history wird gelöscht
+    +   bei komplexen branches sinnvoll
+    +   bei jedem commit werden konflikte angezeigt
+    +   aber vielen Konflikten ist ein Rebase schwerer als ein Merge
+            Revert schwieriger
+    +   goldene Regel: Rebase NIE bei öffentlichen Branches verwenden
+    +   rebase für MICH besser !
 
