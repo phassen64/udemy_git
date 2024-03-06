@@ -465,3 +465,50 @@ https://blog.datamics.com/github-anleitung-zum-umstellen-von-push-mit-passwort-a
 +   git log --since="5 2024-03-06"   ??
 +   git log --until="2024-03-06"   ??
 
++   try: RESET
+    $>  +cdgit_tmp
+    $>  echo "Arnold" >> myPerson.txt; git commit -m "putArnold" my*.txt
+    $>  echo "Berti">> myPerson.txt; git commit -m "putBerti" my*.txt
+    $>  echo "Cleor">> myPerson.txt; git commit -m "putCleor" my*.txt
+    $>  git log --abbrev-commit
+
+
+    $>  git reset --hard d12b4f3
+
++   try: REVERT
+    $>  git revert <id>
+    $>  git revert --abort
+    *   man kann nur 1 Version zurücksetzen
+
+
++   branch.HOFIX and merge
+    $>  git checkout -b b1      # create+switch branch b1
+    $>  git branch              # check activeBanch
+    $>  echo "helloInBranch1" >> hello.txt
+    $>  git add.
+    $>  git commit -m "add:b1:hello"
+    $>  git checkout master     #    zurück zum Master
+    $>  git branch              #   check
+    $>  git merge b1
+    $>  git branch -D b1        #   delete b1
+    $>  git log --abbrev-commit -5  # keine Auskunft über merge
+
++   branch.FEATURE and merge
+    #   Im Unterschied zum hotFix,
+            sind Änderungen während der Bearbeitung
+    #   3-Wege Merge
+            von bf1
+    $>  git checkout -b b1      # create+switch branch b1
+    $>  git branch              # check activeBanch
+    $>  echo "helloFeature1" >> hello.txt
+    $>  git add.
+    $>  git commit -m "add:b1:hello"
+###     $>  git merge master        #   master MERGE - option1
+    $>  git checkout master     #    zurück zum Master
+    $>  git branch              #   check
+    $>  git merge b1 -m "feature+master"
+    $>  git log --abbrev-commit -5
+    $>  git branch -D b1        #   delete b1
+    $>  git log --abbrev-commit -5  # =>  neuer commit
+
+

@@ -28,8 +28,8 @@
 
 •   c:  branch
     $>  git branch                      *   view all branches and the active one
-    $>  git branch -a                   *   show local and remote branches
     $>  git branch <brnID>              *   create new branch, but no switch
+    $>  git branch -a                   *   show local and remote branches
     $>  git branch -d <brnID>           *   remove branch and perform merge-check
     $>  git branch -D <brnID>           *   force remove branch
     $>  git branch -m <bId1> <bId2>     *   rename branch <bId1> into <bId2>
@@ -37,7 +37,6 @@
 •   c:  checkout
     $>  git checkout -b <brnID>         *   switch+create  into newBranch brnID
     $>  git checkout <brnID>            *   restore+switch into branch:brnID
-    $>  git checkout master             *   switch into branch:master
     $>  git checkout HEAD .             *   alle lokalen Änderungen verwerfen
     $>  git checkout HEAD <file>        *   lokales File zurücksetzen - not committed
     $>  git checkout <tagID||brnID>     *   switch BRANCH or TAG
@@ -72,7 +71,7 @@
     $>  git log -p <file>               *   log einer bestimmten Datei + diff command
 
 •   c:  merge
-    $>  git merge <brnID>               *    HEAD==master imports bBranch
+    $>  git merge <brnID>               *    HEAD==master imports branch <brnID>
     $>  git merge master                *    HEAD==bTmp; branch bTmp imports master
     $>  git merge --abort               *    cancel a merge
     $>  git mergetool                   *    merge tool
@@ -98,9 +97,9 @@
     $>  git rm <file>                   * remove a file
 
 •   c:  reset
-    $>  git reset <ID>
     $>  git reset --hard HEAD       *   lokales File zurücksetzen - not committed
     $>  git reset –-hard <cmmID>    *   reset myBranch TO commit
+    $>  git reset <cmmID>           *   ... unstaged changes left
 
 •   c:  restore
     $>  git restore .               *   restore repository.local after push/pull

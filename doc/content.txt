@@ -209,6 +209,8 @@
 --- s:  Kapitel 4: GIT Wiederherstellen
 -------------------------------------------------------------------------------
 
+#   Wiederherstellen - lokale Änderungen oder im Staging-Bereich
+
 *   Git Historie
     pwd
     git help log
@@ -280,7 +282,7 @@
 
 *   Branching
     cd football
-    git fetch
+    git fetch       # aktuelle branches laden
     git pull
     git status
     git checkout main
@@ -288,8 +290,8 @@
 *   Branch erstellen
     pwd
     git checkout -b feature-abc-12-Userlogin
-    # git branch feature-abc-12-Userlogin &
-    #       git checkout feature-abc-12-Userlogin
+    #   oder:   git branch feature-abc-12-Userlogin &
+    #           git checkout feature-abc-12-Userlogin
     echo "Mein neuer Code…" > user_login.py
     git commit -m "abc-12: neuer user login" user_login.py
     git status
@@ -314,13 +316,12 @@
     cat Dockerfile
     git merge hotfix
     cat Dockerfile
-    git branch -d hotfix        # delete ?
+    git branch -d hotfix        # delete merged branch hotfix
     git branch
     git push origin main
 
-
 *   Branch merge (feature)
-
+    #   3-Wege Merge
     git checkout feature-abc-12-Userlogin
     echo „Neue Codezeile …“ >> user_login.py
     cat user_login.py
@@ -332,7 +333,6 @@
     git branch
     git log
     git push origin main
-
 
 *   git Rebase
 

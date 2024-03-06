@@ -68,3 +68,40 @@
 #   m:restore
 #
 
+#   a) staged
+        in git existierende Dateien,
+            die geändert wurden,
+        aber nicht committed wurden
+        $>  git checkout HEAD <file>    # Änderungen zurücksetzen
+        $>  git reset --hard HEAD       # dito
+
+#   b) not staged
+        zum Beispiel neue Dateien
+        <<< nur mit a) remove oder b ) cloning möglich
+
+
+#
+#   m:reset vs revert
+#
+
+reset : löscht bis zu einem commit x
+revert: setzt HEAD:=commitX - history erhalten und neuer revert-Commit
+
+$>git reset --hard <cmmId>
+
+#
+#   m:branch
+#
+
+1)  neuen Branch erstellen
+    $>git branch b1
+    $>git switch b1
+        oder
+    $>git checkout -b b1
+2)  im branch b1 Änderungen durchführen
+        und commit
+3)  git checkout master
+4)  git merge b1
+
+
+
