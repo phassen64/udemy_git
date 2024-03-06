@@ -441,6 +441,15 @@ https://blog.datamics.com/github-anleitung-zum-umstellen-von-push-mit-passwort-a
 
 
 
++   Forking creates your own copy of a repository in a 
+        remote location (for example, GitHub). 
+    Your own copy means that you will be able to contribute changes to 
+        your copy of the repository without affecting the original repository. 
+    Cloning makes a local copy of a repository, not your own copy.
+    A developer who wants to set up a new, separate and isolated project 
+        that is based on a publicly accessible Git repo should perform a fork.
     
 
     
++   using SSH 
+    git@github.com:phassen64/udemy_football.git

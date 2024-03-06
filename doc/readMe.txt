@@ -15,6 +15,7 @@
 === m:  Kursübersicht
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 
+
 1.  Willkommen
     •   wozu eine Versionsverwaltung
         +   zentrale    : CVS, SVN
@@ -42,14 +43,23 @@
     •   crash Kurs
         $>  ls, cd, man, mkdir, cat, cp, echo, rm
         $>  vi oder vim
-        $> 
+        $>  sudo
     •   Terminal
         CTRL-ALT+T
     
 4.  git hub - Schnellstart
     •   eigenes Projekt
     •   Authentifizierung mit Token - für git push
-
+    *   SSH for UNIX/MAX nicht Windows
+    $>  ssh-keygen -t ed25519 -C "pluto64@e-mail.de" # auf $HOME/.ssh erzeugen
+    $>  eval "$(ssh-agent -s)"      # Agent Starten
+    $>  ssh-add ~/.ssh/id_ed25519   # Key aktivieren
+    $>  cat ~/.ssh/id_ed25519.pub   # publicKey anzeigen lassen
+    $<  ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILDLtA5wYwVZtDMt2G0qvWCYS8k/8CnnhnCajcKU+QkC 
+                    pluto64@e-mail.de
+    Copy von 
+        ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILDLtA5wYwVZtDMt2G0qvWCYS8k/8CnnhnCajcKU+QkC 
+    
 5.  git Grundlagen
     •   fork auf https://github.com/google-research/football
     •   $>  git add .   :   mehrere Dateien gleichzeitig hinzufügen
