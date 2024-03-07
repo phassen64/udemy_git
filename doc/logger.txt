@@ -473,7 +473,7 @@ https://blog.datamics.com/github-anleitung-zum-umstellen-von-push-mit-passwort-a
     $>  git log --abbrev-commit
 
 
-    $>  git reset --hard d12b4f3
+    $>  git reset --hard --quiet d12b4f3
 
 +   try: REVERT
     $>  git revert <id>
@@ -523,3 +523,40 @@ https://blog.datamics.com/github-anleitung-zum-umstellen-von-push-mit-passwort-a
     $>  git branch -a               # auch remote branch ansehen
     $>  git checkout GH-822-xlnet   #  den remote branch verwenden
     $>  git dif master hotfix
+
+
+<<< !date:<2022-03-07>:Do
+
++   git stash
+    +   ohne commit sichern
+    +   aber neue Dateien werden nicht in den Stash überführt
+
+
++   Befehle git stash #
+
+    $>  git stash push
+    $>  git stash           #   *stash++:=mem; mem:=0;
+            #   Änderungen speichern
+            #   den branch wieder zurücksetzen
+
+    $>  git stash list
+    $>  git stash show      #   Änderungen sehen
+
+#   stash einsetzen
+a)
+    $>  git stash apply     #   mem := *stash
+    $>  git stash drop      #   stash--
+b)
+    $>  git stash pop       #   mem := *stash--
+
+
++   Test
+    $>  echo "peter1" >> myPerson.txt; git stash push
+    $>  echo "peter2" >> myPerson.txt; git stash push
+    $>  echo "peter3" >> myPerson.txt; git stash push
+    $>  git stash list
+    $>  git stash pop   # holt nur peter3 zurück
+    $>  git stash pop   # ??? error
+    =>  Die Änderungen peter1 und peter2 sind verloren
+
+

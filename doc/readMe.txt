@@ -142,3 +142,24 @@ rebase :
     +   goldene Regel: Rebase NIE bei öffentlichen Branches verwenden
     +   rebase für MICH besser !
 
+
+#
+#   m:tag
+#
+
+#   Pointer auf einen speziellen Commit
+    mit einem sprechenden Namen
+
+#   LightWeight Tag
+    $>  git tag <tagId>
+
+#   Annotated Tag
+    #   Tag mit Commit Message
+    $>  git tag -a <tagId> -m "annotad tag"
+
+#   Ein Tag ist eine Mischung aus Commit und Branch.
+    Man kann später auf diesen Tag springen mit
+    $>  git checkout tagId
+
+
+
